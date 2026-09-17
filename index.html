@@ -1,0 +1,885 @@
+<!doctype html>
+<html lang="ru" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="google" content="notranslate">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mom's Beauty — сертификаты</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F1EBDE; --card:#FAF6EC; --card-2:#F3EDE0; --sunk:#EDE6D6;
+  --ink:#1D2A21; --ink-2:#5B6357; --ink-3:#8D9284;
+  --line:#D8CFBA; --line-2:#E7DFCD;
+  --green:#1F3A2E; --green-soft:#E2E7DF;
+  --brass:#9C7B3E; --brass-soft:#EEE4CC;
+  --oxblood:#7A3B32; --oxblood-soft:#F0DFD9;
+  --btn-bg:#1F3A2E; --btn-fg:#F6F1E3;
+  --r:2px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0F1512; --card:#17201A; --card-2:#1C261F; --sunk:#131A15;
+    --ink:#EDE5D3; --ink-2:#A6AE9F; --ink-3:#7A8177;
+    --line:#2B362D; --line-2:#212B23;
+    --green:#A9C4B2; --green-soft:#1E2A22;
+    --brass:#C9A667; --brass-soft:#241E13;
+    --oxblood:#C08D80; --oxblood-soft:#2A1C18;
+    --btn-bg:#E8DFC9; --btn-fg:#16201A;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0F1512; --card:#17201A; --card-2:#1C261F; --sunk:#131A15;
+  --ink:#EDE5D3; --ink-2:#A6AE9F; --ink-3:#7A8177;
+  --line:#2B362D; --line-2:#212B23;
+  --green:#A9C4B2; --green-soft:#1E2A22;
+  --brass:#C9A667; --brass-soft:#241E13;
+  --oxblood:#C08D80; --oxblood-soft:#2A1C18;
+  --btn-bg:#E8DFC9; --btn-fg:#16201A;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--paper); color:var(--ink);
+  font-family:Manrope, ui-sans-serif, system-ui, -apple-system, sans-serif;
+  font-size:14.5px; font-weight:400; line-height:1.55;
+  -webkit-text-size-adjust:100%; font-variant-numeric:tabular-nums;
+}
+h1,h2,h3{margin:0;font-weight:500;letter-spacing:0}
+button{font:inherit;color:inherit}
+input,select,textarea{font:inherit;color:inherit}
+.disp{font-family:"Cormorant Garamond", Georgia, serif;font-weight:300;letter-spacing:.01em}
+.lbl{font-family:"Cormorant Garamond", Georgia, serif;font-size:12.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ink-3);font-weight:500}
+
+/* монограмма */
+.mono{width:42px;height:42px;border:1px solid var(--brass);display:grid;place-items:center;
+  font-family:"Cormorant Garamond",Georgia,serif;font-size:17px;letter-spacing:.06em;color:var(--brass);margin-bottom:12px}
+
+/* каркас */
+.shell{display:block;min-height:100dvh}
+.rail{display:none}
+.main{padding:18px 16px 106px;max-width:1120px;margin:0 auto}
+@media (min-width:980px){
+  .shell{display:grid;grid-template-columns:252px minmax(0,1fr);align-items:start}
+  .rail{display:block;position:sticky;top:0;height:100dvh;padding:32px 24px;background:var(--card);
+    border-right:1px solid var(--line);box-shadow:inset -4px 0 0 -3px var(--line)}
+  .main{padding:38px 48px 72px}
+  .tabbar{display:none!important}
+}
+.brand{margin-bottom:36px}
+.brand b{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;font-size:25px;line-height:1.08}
+.brand span{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-size:11.5px;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);margin-top:5px}
+.navlink{display:block;width:100%;text-align:left;padding:9px 0;border:0;background:transparent;
+  cursor:pointer;color:var(--ink-2);font-size:14px}
+.navlink:hover{color:var(--ink)}
+.navlink[aria-current="true"]{color:var(--ink);font-weight:600}
+.navlink[aria-current="true"]:before{content:"";display:inline-block;width:16px;height:1px;
+  background:var(--brass);vertical-align:middle;margin-right:10px}
+.navlink[aria-current="false"]{padding-left:26px}
+.railacts{margin-top:28px;padding-top:24px;border-top:1px solid var(--line);display:grid;gap:9px}
+.railfoot{position:absolute;bottom:26px;left:24px;right:24px;border-top:1px solid var(--line);padding-top:15px}
+.railfoot b{display:block;font-size:13.5px;font-weight:600}
+.railfoot .tiny{margin-bottom:9px}
+
+.topbar{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:24px;
+  padding-bottom:15px;border-bottom:1px solid var(--line);box-shadow:0 3px 0 -2px var(--line)}
+@media (min-width:980px){.topbar{display:none}}
+.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:repeat(5,1fr);
+  background:var(--card);border-top:1px solid var(--line);box-shadow:0 -4px 0 -3px var(--line);
+  padding:9px 4px calc(9px + env(safe-area-inset-bottom))}
+.tab{border:0;background:transparent;padding:5px 2px;font-size:11px;color:var(--ink-3);cursor:pointer;letter-spacing:.03em}
+.tab[aria-current="true"]{color:var(--ink);font-weight:600}
+.tab.accent{color:var(--brass);font-weight:600}
+
+/* элементы */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r)}
+.pad{padding:20px}
+.row{display:flex;align-items:center;gap:10px}
+.spread{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.wrap{display:flex;flex-wrap:wrap;gap:7px}
+.muted{color:var(--ink-2)}
+.tiny{font-size:12px;color:var(--ink-3)}
+.sec{margin:32px 0 12px;font-family:"Cormorant Garamond",Georgia,serif;font-size:12.5px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);font-weight:500}
+.btn{border:1px solid var(--line);background:transparent;border-radius:var(--r);padding:11px 20px;
+  font-size:13px;font-weight:600;letter-spacing:.04em;cursor:pointer;
+  display:inline-flex;gap:8px;align-items:center;justify-content:center;white-space:nowrap}
+.btn:hover{border-color:var(--ink-3)}
+.btn.primary{background:var(--btn-bg);border-color:var(--btn-bg);color:var(--btn-fg)}
+.btn.primary:hover{opacity:.9}
+.btn.ghost{border-color:transparent;color:var(--ink-2);padding:8px 0}
+.btn.ghost:hover{color:var(--ink)}
+.btn.danger{color:var(--oxblood)}
+.btn.sm{padding:8px 14px;font-size:12px}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.chip{border:1px solid var(--line);background:transparent;border-radius:var(--r);padding:7px 14px;
+  font-size:12.5px;cursor:pointer;color:var(--ink-2);letter-spacing:.02em}
+.chip[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:var(--btn-fg)}
+:root[data-theme="dark"] .chip[aria-pressed="true"],
+:root:not([data-theme="light"]) .chip[aria-pressed="true"]{color:#14201A}
+.st{font-size:11.5px;letter-spacing:.06em;white-space:nowrap;display:inline-flex;align-items:center;gap:6px}
+.st:before{content:"";width:5px;height:5px;border-radius:50%;background:currentColor;flex:none}
+.st.active{color:var(--brass)} .st.used{color:var(--ink-3)} .st.stock{color:var(--green)}
+.st.expired{color:var(--oxblood)} .st.void{color:var(--ink-3)}
+label.f{display:block;margin-bottom:16px}
+label.f>span{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-size:12px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px;font-weight:500}
+.in{width:100%;padding:10px 0;border:0;border-bottom:1px solid var(--line);border-radius:0;
+  background:transparent;font-size:15px}
+.in:focus{outline:0;border-bottom-color:var(--brass);box-shadow:0 1px 0 0 var(--brass)}
+select.in{appearance:none;padding-right:22px;
+  background-image:linear-gradient(45deg,transparent 50%,var(--ink-3) 50%),linear-gradient(135deg,var(--ink-3) 50%,transparent 50%);
+  background-position:calc(100% - 9px) 19px,calc(100% - 5px) 19px;background-size:4px 4px;background-repeat:no-repeat}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 24px}
+@media (max-width:560px){.grid2{grid-template-columns:1fr}}
+.bar{height:2px;background:var(--line-2)}
+.bar>i{display:block;height:100%;background:var(--brass)}
+.empty{text-align:center;padding:56px 20px;color:var(--ink-2)}
+.empty b{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;font-size:22px;
+  color:var(--ink);margin-bottom:6px}
+
+/* сводка */
+.hero{border-bottom:1px solid var(--line);box-shadow:0 3px 0 -2px var(--line);padding-bottom:28px}
+.hero .big{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;
+  font-size:clamp(3.1rem,13vw,5.4rem);line-height:1;margin:12px 0 9px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(152px,1fr));gap:1px;
+  background:var(--line);border:1px solid var(--line);margin-top:22px}
+.kpi{background:var(--card);padding:16px 17px}
+.kpi .v{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;font-size:26px;line-height:1.15;margin-top:5px}
+.brow{padding:14px 0;border-bottom:1px solid var(--line-2)}
+.brow:last-child{border-bottom:0}
+.brow .top{display:flex;justify-content:space-between;gap:14px;align-items:baseline}
+.brow .nm{font-size:14px}
+.brow .vv{font-family:"Cormorant Garamond",Georgia,serif;font-size:20px}
+.fitem{display:grid;grid-template-columns:1fr auto;gap:3px 14px;padding:14px 0;
+  border-bottom:1px solid var(--line-2);align-items:baseline}
+.fitem:last-child{border-bottom:0}
+.fitem .amt{font-family:"Cormorant Garamond",Georgia,serif;font-size:19px}
+
+/* реестр */
+.clist{border-top:1px solid var(--line)}
+.crow{display:grid;grid-template-columns:minmax(96px,auto) minmax(0,1fr) auto;gap:3px 20px;align-items:center;
+  width:100%;text-align:left;padding:16px 0;border:0;border-bottom:1px solid var(--line-2);
+  background:transparent;cursor:pointer;font:inherit;color:inherit}
+.crow:hover{background:var(--card-2)}
+.crow .no{font-family:"Cormorant Garamond",Georgia,serif;font-size:22px;font-weight:400;letter-spacing:.02em}
+.crow .nm{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:14px}
+.crow .rt{text-align:right}
+.crow .amt{font-family:"Cormorant Garamond",Georgia,serif;font-size:20px;display:block;margin-top:2px}
+.crow .full{grid-column:1/-1;margin-top:9px}
+@media (max-width:560px){.crow{grid-template-columns:1fr auto}.crow .no{font-size:20px}}
+.hev{display:grid;grid-template-columns:1fr auto;gap:2px 14px;padding:13px 0;
+  border-bottom:1px solid var(--line-2);align-items:baseline}
+.hev:last-child{border-bottom:0}
+.kv{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--line-2)}
+.kv:last-child{border-bottom:0}
+
+/* окна */
+.scrim{position:fixed;inset:0;background:rgba(15,21,18,.5);z-index:60;display:flex;
+  align-items:flex-end;justify-content:center}
+@media (min-width:720px){.scrim{align-items:center;padding:26px}}
+.sheet{background:var(--card);width:100%;max-width:540px;max-height:92dvh;overflow:auto;
+  border:1px solid var(--line);border-radius:var(--r) var(--r) 0 0;
+  padding:24px 20px calc(28px + env(safe-area-inset-bottom))}
+@media (min-width:720px){.sheet{border-radius:var(--r);padding:32px}}
+.sheethead{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:24px;
+  padding-bottom:15px;border-bottom:1px solid var(--line);box-shadow:0 3px 0 -2px var(--line)}
+.sheethead h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;font-size:27px;line-height:1.12}
+.x{border:0;background:transparent;cursor:pointer;font-size:17px;color:var(--ink-3);padding:0 2px;flex:none}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(86px + env(safe-area-inset-bottom));
+  z-index:80;background:var(--btn-bg);color:var(--btn-fg);padding:13px 22px;border-radius:var(--r);font-size:13.5px;max-width:92vw}
+@media (min-width:980px){.toast{bottom:30px}}
+.toast.bad{background:var(--oxblood);color:#F6F1E3}
+.err{border-left:2px solid var(--oxblood);color:var(--oxblood);padding:9px 0 9px 13px;font-size:13px;margin-bottom:18px}
+
+/* вход */
+.gate{min-height:100dvh;display:grid;place-items:center;padding:28px}
+.gatecard{width:100%;max-width:390px}
+.gbrand{text-align:center;margin-bottom:36px}
+.gbrand .mono{margin:0 auto 16px}
+.gbrand b{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;font-size:37px;line-height:1.04}
+.gbrand span{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-size:11.5px;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3);margin-top:9px}
+.pinrow{display:flex;gap:12px;justify-content:center;margin:22px 0 24px}
+.pindot{width:7px;height:7px;border-radius:50%;background:var(--line)}
+.pindot.on{background:var(--brass)}
+.pad3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.key{padding:18px 0;border:0;background:var(--card);font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:24px;cursor:pointer}
+.key:active{background:var(--brass-soft)}
+.staffbtn{width:100%;text-align:left;padding:16px 0;border:0;border-bottom:1px solid var(--line-2);
+  background:transparent;cursor:pointer;display:flex;justify-content:space-between;align-items:center;
+  gap:12px;font:inherit;color:inherit}
+.staffbtn:hover{color:var(--brass)}
+@media (prefers-reduced-motion:no-preference){.sheet{animation:up .2s ease-out}}
+@keyframes up{from{transform:translateY(12px);opacity:.5}to{transform:none;opacity:1}}
+</style>
+</head>
+<body class="notranslate" translate="no">
+<div id="root"><div class="gate"><div class="tiny">Загрузка…</div></div></div>
+<div id="modal"></div>
+<div id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script>
+
+"use strict";
+const $ = s => document.querySelector(s);
+const esc = s => String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const money = n => new Intl.NumberFormat("ru-RU").format(Math.round(Number(n)||0)) + " ₸";
+const dfmt = new Intl.DateTimeFormat("ru-RU",{day:"2-digit",month:"short",year:"2-digit"});
+const dtfmt = new Intl.DateTimeFormat("ru-RU",{day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"});
+const dt = s => { const d=new Date(s); return isNaN(d)?"—":dfmt.format(d); };
+const dtt = s => { const d=new Date(s); return isNaN(d)?"—":dtfmt.format(d); };
+const sleep = ms => new Promise(r=>setTimeout(r,ms));
+const safeId = s => String(s).replace(/[^A-Za-z0-9_\-.~:@+]/g,"-").slice(0,60) || "x";
+function ls(k,v){ try{ if(v===undefined) return localStorage.getItem(k); localStorage.setItem(k,v);}catch(e){} }
+function ss(k,v){ try{ if(v===undefined) return sessionStorage.getItem(k); if(v===null) sessionStorage.removeItem(k); else sessionStorage.setItem(k,v);}catch(e){} }
+function addMonths(d,m){ const x=new Date(d); const day=x.getDate(); x.setMonth(x.getMonth()+m); if(x.getDate()<day) x.setDate(0); return x; }
+function isoDate(d){ const x=new Date(d); return new Date(x.getTime()-x.getTimezoneOffset()*60000).toISOString().slice(0,10); }
+function brName(n){ return '<span translate="no" class="notranslate">'+esc(n)+'</span>'; }
+
+/* Названия филиалов зафиксированы. Их нельзя переименовать из интерфейса. */
+const CANON_BRANCH = {
+  first:"Mom's Beauty First",
+  second:"Mom's Beauty Turan",
+  turan:"Mom's Beauty Turan",
+  privat:"Mom's Privat",
+  prouve:"Mom's Beauty Prouve"
+};
+const DEFAULT_BRANCHES = [
+  {id:"first",  name:CANON_BRANCH.first},
+  {id:"turan",  name:CANON_BRANCH.turan},
+  {id:"privat", name:CANON_BRANCH.privat},
+  {id:"prouve", name:CANON_BRANCH.prouve}
+];
+const DEFAULT_SETTINGS = { prefix:"MB-", pad:4, validityMonths:12, branches:DEFAULT_BRANCHES, nominals:[10000,20000,30000,50000,100000] };
+
+const S = {
+  dl:true, boot:"loading", bootMsg:"",
+  staff:[], certs:[], settings:null, loaded:{staff:false,certs:false},
+  me:null, gate:{email:"", err:""},
+  view:"dash", period:"month", q:"", fStatus:"all", fBranch:"all",
+  modal:null, busy:false
+};
+
+function branches(){
+  const stored = (S.settings && Array.isArray(S.settings.branches) && S.settings.branches.length) ? S.settings.branches : DEFAULT_BRANCHES;
+  return stored.map(b => CANON_BRANCH[b.id] ? {id:b.id, name:CANON_BRANCH[b.id]} : b);
+}
+function branchName(id){ const b = branches().find(b=>b.id===id); return b?b.name:(id||"—"); }
+function cfg(k){ const s=S.settings||{}; return (s[k]!==undefined && s[k]!==null && s[k]!=="") ? s[k] : DEFAULT_SETTINGS[k]; }
+function statusOf(c){
+  if(c.status==="void") return "void";
+  if(c.status==="stock") return "stock";
+  if((Number(c.balance)||0)<=0) return "used";
+  if(c.expiresAt && new Date(c.expiresAt) < new Date(new Date().toDateString())) return "expired";
+  return "active";
+}
+const ST = {active:"Продан", used:"Использован", stock:"Бланк", expired:"Просрочен", void:"Аннулирован"};
+
+/* ---------- данные: Supabase ---------- */
+const sb = (window.SUPABASE_URL && window.supabase)
+  ? window.supabase.createClient(window.SUPABASE_URL, window.SUPABASE_ANON_KEY)
+  : null;
+
+function camelCert(c, reds){
+  return {
+    id: String(c.id), num: c.num, number: c.number, nominal: c.nominal, balance: c.balance,
+    status: c.status, clientName: c.client_name || "", clientPhone: c.client_phone || "",
+    soldBranch: c.sold_branch || "", soldById: c.sold_by_id || "", soldByName: c.sold_by_name || "",
+    soldAt: c.sold_at || "", expiresAt: c.expires_at || "", note: c.note || "",
+    createdAt: c.created_at || "", createdByName: c.created_by_name || "",
+    voidedAt: c.voided_at || "", voidedByName: c.voided_by_name || "",
+    redemptions: (reds[c.id] || []).map(r=>({ at:r.at, amount:r.amount, branch:r.branch||"",
+      byId:r.by_id||"", byName:r.by_name||"", note:r.note||"" }))
+  };
+}
+async function refresh(){
+  const { data: { user } } = await sb.auth.getUser();
+  if(!user){ S.me=null; S.certs=[]; S.staff=[]; S.boot="ok"; render(); return; }
+
+  const [st, ce, re, se] = await Promise.all([
+    sb.from("staff").select("*"),
+    sb.from("certs").select("*").order("num", {ascending:false}),
+    sb.from("redemptions").select("*").order("id", {ascending:true}),
+    sb.from("settings").select("*").eq("id",1).maybeSingle()
+  ]);
+  const err = st.error || ce.error || re.error || se.error;
+  if(err) throw new Error(err.message);
+
+  S.staff = (st.data||[]).map(x=>({id:String(x.id), name:x.name, branch:x.branch, role:x.role, active:x.active!==false}));
+  const byCert = {};
+  for(const r of (re.data||[])) (byCert[r.cert_id] = byCert[r.cert_id] || []).push(r);
+  S.certs = (ce.data||[]).map(c=>camelCert(c, byCert));
+  S.settings = se.data ? {prefix:se.data.prefix, pad:se.data.pad, validityMonths:se.data.validity_months,
+                          nominals:se.data.nominals, branches:DEFAULT_BRANCHES} : null;
+  S.me = S.staff.find(x=>x.id===String(user.id)) || null;
+  S.boot = S.me ? "ok" : "noprofile";
+  render();
+}
+async function start(){
+  if(!sb){
+    S.boot="nodb";
+    S.bootMsg="Не заданы адрес проекта и ключ Supabase. Откройте файл config.js и впишите их.";
+    render(); return;
+  }
+  try{ await refresh(); }
+  catch(e){ S.boot="nodb"; S.bootMsg="База недоступна: "+e.message; render(); return; }
+  sb.auth.onAuthStateChange(()=>{ refresh().catch(()=>{}); });
+  setInterval(()=>{ if(S.me && !S.modal) refresh().catch(()=>{}); }, 15000);
+  document.addEventListener("visibilitychange", ()=>{ if(!document.hidden && S.me) refresh().catch(()=>{}); });
+}
+function fmtNumber(n){ return cfg("prefix") + String(n).padStart(Number(cfg("pad"))||4,"0"); }
+function nextNum(){ return S.certs.reduce((m,c)=>Math.max(m,Number(c.num)||0),0)+1; }
+
+/* ---------- выборки ---------- */
+function periodStart(){
+  const now=new Date();
+  if(S.period==="today") return new Date(now.getFullYear(),now.getMonth(),now.getDate());
+  if(S.period==="week") return new Date(Date.now()-7*864e5);
+  if(S.period==="month") return new Date(Date.now()-30*864e5);
+  return new Date(0);
+}
+function events(){
+  const out=[];
+  for(const c of S.certs){
+    if(c.createdAt && c.status==="stock") out.push({t:"stock",at:c.createdAt,cert:c,amount:Number(c.nominal)||0,branch:c.soldBranch,who:c.createdByName});
+    if(c.soldAt && c.status!=="stock") out.push({t:"sale",at:c.soldAt,cert:c,amount:Number(c.nominal)||0,branch:c.soldBranch,who:c.soldByName});
+    for(const r of (c.redemptions||[])) out.push({t:"red",at:r.at,cert:c,amount:Number(r.amount)||0,branch:r.branch,who:r.byName,note:r.note});
+  }
+  return out.sort((a,b)=> new Date(b.at) - new Date(a.at));
+}
+function stats(){
+  const from = periodStart(), ev = events();
+  let sold=0, soldN=0, red=0, redN=0;
+  const byBranch={}, byStaff={};
+  for(const b of branches()) byBranch[b.id]={sold:0,red:0};
+  for(const e of ev){
+    if(new Date(e.at) < from) continue;
+    if(e.t==="sale"){ sold+=e.amount; soldN++; if(byBranch[e.branch]) byBranch[e.branch].sold+=e.amount; byStaff[e.who||"—"]=(byStaff[e.who||"—"]||0)+e.amount; }
+    if(e.t==="red"){ red+=e.amount; redN++; if(byBranch[e.branch]) byBranch[e.branch].red+=e.amount; }
+  }
+  let liab=0, liabN=0, exp=0, expN=0, stock=0;
+  for(const c of S.certs){
+    const st=statusOf(c);
+    if(st==="active"){ liab+=Number(c.balance)||0; liabN++; }
+    if(st==="expired"){ exp+=Number(c.balance)||0; expN++; }
+    if(st==="stock") stock++;
+  }
+  return {sold,soldN,red,redN,byBranch,byStaff,liab,liabN,exp,expN,stock,ev};
+}
+function visibleCerts(){
+  const q = S.q.trim().toLowerCase();
+  return S.certs.filter(c=>{
+    if(S.fStatus!=="all" && S.fStatus!==statusOf(c)) return false;
+    if(S.fBranch!=="all" && c.soldBranch!==S.fBranch) return false;
+    if(!q) return true;
+    return [c.number,c.clientName,c.clientPhone,c.soldByName,c.note].some(v=>String(v||"").toLowerCase().includes(q));
+  });
+}
+function findByNumber(str){
+  const n = String(str||"").trim().toLowerCase().replace(/\s/g,"");
+  if(!n) return null;
+  return S.certs.find(c=>String(c.number).toLowerCase()===n)
+      || S.certs.find(c=>String(c.number).toLowerCase().replace(/^\D+/,"")===n.replace(/^\D+/,"")) || null;
+}
+
+/* ---------- операции ---------- */
+function flash(msg, bad){
+  $("#toast").innerHTML = '<div class="toast'+(bad?" bad":"")+'">'+esc(msg)+'</div>';
+  clearTimeout(flash._t); flash._t = setTimeout(()=>{ $("#toast").innerHTML=""; }, bad?4800:2600);
+}
+function openModal(m){ S.modal=m; renderModal(true); }
+function closeModal(){ S.modal=null; renderModal(true); }
+
+async function rpc(name, args){
+  const { data, error } = await sb.rpc(name, args);
+  if(error) throw new Error(error.message.replace(/^.*?:\s*/, ""));
+  return data;
+}
+async function doSell(v){
+  const number = await rpc("sell_certificate", {
+    p_cert_id: v.certId ? Number(v.certId) : null, p_nominal: v.nominal,
+    p_client_name: v.clientName || "", p_client_phone: v.clientPhone || "",
+    p_branch: v.branch, p_expires_at: v.expiresAt || null, p_note: v.note || ""
+  });
+  await refresh();
+  return number;
+}
+async function doIssueBatch(count, nominal, branch){
+  const n = await rpc("issue_blanks", {p_count: count, p_nominal: nominal, p_branch: branch});
+  await refresh();
+  return n;
+}
+async function doRedeem(cert, amount, branch, note){
+  const left = await rpc("redeem_certificate", {
+    p_cert_id: Number(cert.id), p_amount: amount, p_branch: branch, p_note: note || ""
+  });
+  await refresh();
+  return left;
+}
+function exportCsv(){
+  const head = ["Номер","Статус","Номинал","Остаток","Клиент","Телефон","Филиал продажи","Продал",
+                "Дата продажи","Действует до","Погашений","Погашено всего","Комментарий"];
+  const rows = S.certs.slice().sort((a,b)=>(a.num||0)-(b.num||0)).map(c=>{
+    const used = (c.redemptions||[]).reduce((s,r)=>s+(Number(r.amount)||0),0);
+    return [c.number, ST[statusOf(c)], c.nominal||0, c.balance||0, c.clientName, c.clientPhone,
+      branchName(c.soldBranch), c.soldByName, c.soldAt?dt(c.soldAt):"", c.expiresAt?dt(c.expiresAt):"",
+      (c.redemptions||[]).length, used, c.note];
+  });
+  const csv = "\uFEFF" + [head].concat(rows).map(r=>r.map(v=>{
+    const t = String(v==null?"":v);
+    return /[";\n]/.test(t) ? '"'+t.replace(/"/g,'""')+'"' : t;
+  }).join(";")).join("\r\n");
+  const blob = new Blob([csv], {type:"text/csv;charset=utf-8"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "momsbeauty-"+isoDate(new Date())+".csv";
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(()=>URL.revokeObjectURL(a.href), 2000);
+}
+
+/* ---------- вход ---------- */
+function gbrand(){ return '<div class="gbrand"><div class="mono">MB</div><b>Mom&#39;s Beauty</b><span>Подарочные сертификаты</span></div>'; }
+function renderGate(){
+  const g = S.gate;
+  if(S.boot==="loading") return '<div class="gate"><div class="tiny">Загрузка…</div></div>';
+  if(S.boot==="nodb")
+    return '<div class="gate"><div class="gatecard">'+gbrand()+
+      '<div class="card pad"><p class="muted" style="margin:0">'+esc(S.bootMsg)+'</p></div></div></div>';
+  if(S.boot==="noprofile")
+    return '<div class="gate"><div class="gatecard">'+gbrand()+`
+      <div class="card pad">
+        <p class="muted" style="margin:0 0 18px">Вы вошли, но карточка сотрудника ещё не заведена. Попросите владельца добавить вас в разделе «Команда».</p>
+        <button class="btn" data-act="logout" style="width:100%">Выйти</button>
+      </div></div></div>`;
+  return '<div class="gate"><div class="gatecard">'+gbrand()+`
+    <div class="card pad">
+      <div class="lbl" style="margin-bottom:14px">Вход для администраторов</div>
+      ${g.err?'<div class="err">'+esc(g.err)+'</div>':''}
+      <label class="f"><span>Рабочая почта</span><input class="in" data-k="l-email" id="l-email" type="email"
+        autocomplete="username" value="${esc(g.email)}" placeholder="admin.turan@momsbeauty.kz"></label>
+      <label class="f"><span>Пароль</span><input class="in" id="l-pass" type="password" autocomplete="current-password"></label>
+      <button class="btn primary" data-act="dologin" style="width:100%;margin-top:8px">Войти</button>
+      <p class="tiny" style="margin:16px 0 0">Пароль забыли — обратитесь к владельцу, он сбросит его в панели Supabase.</p>
+    </div></div></div>`;
+}
+
+/* ---------- приложение ---------- */
+function render(){
+  const focus = document.activeElement;
+  const fk = focus && focus.dataset ? focus.dataset.k : null;
+  const fpos = focus && focus.selectionStart;
+  if(!S.me || S.boot!=="ok"){ $("#root").innerHTML = renderGate(); return; }
+
+  const isOwner = S.me.role==="owner";
+  const nav = [["dash","Сводка"],["certs","Сертификаты"],["team","Команда"]].concat(isOwner?[["settings","Настройки"]]:[]);
+
+  $("#root").innerHTML = `
+  <div class="shell">
+    <aside class="rail">
+      <div class="brand"><div class="mono">MB</div><b>Mom&#39;s Beauty</b><span>Сертификаты</span></div>
+      ${nav.map(n=>`<button class="navlink" data-act="nav" data-v="${n[0]}" aria-current="${S.view===n[0]}">${n[1]}</button>`).join("")}
+      <div class="railacts">
+        <button class="btn primary" data-act="sell">Продать сертификат</button>
+        <button class="btn" data-act="redeem">Погасить</button>
+      </div>
+      <div class="railfoot"><b>${esc(S.me.name)}</b><div class="tiny">${brName(branchName(S.me.branch))}</div>
+        <div class="row" style="gap:16px"><button class="btn ghost" data-act="theme">Тема</button><button class="btn ghost" data-act="logout">Выйти</button></div></div>
+    </aside>
+    <main class="main">
+      <div class="topbar">
+        <div><b class="disp" style="font-size:22px">Mom&#39;s Beauty</b>
+          <div class="tiny">${esc(S.me.name)} · ${brName(branchName(S.me.branch))}</div></div>
+        <div class="row" style="gap:14px"><button class="btn ghost" data-act="theme">Тема</button><button class="btn ghost" data-act="logout">Выйти</button></div>
+      </div>
+      ${ S.view==="dash" ? viewDash() : S.view==="certs" ? viewCerts() : S.view==="team" ? viewTeam() : viewSettings() }
+    </main>
+  </div>
+  <nav class="tabbar">
+    <button class="tab" data-act="nav" data-v="dash" aria-current="${S.view==="dash"}">Сводка</button>
+    <button class="tab" data-act="nav" data-v="certs" aria-current="${S.view==="certs"}">Список</button>
+    <button class="tab accent" data-act="sell">Продать</button>
+    <button class="tab" data-act="redeem">Погасить</button>
+    <button class="tab" data-act="nav" data-v="${S.me.role==="owner"?"settings":"team"}" aria-current="${S.view==="team"||S.view==="settings"}">${S.me.role==="owner"?"Ещё":"Команда"}</button>
+  </nav>`;
+  if(fk){ const el=document.querySelector('[data-k="'+fk+'"]'); if(el){ el.focus(); try{ el.setSelectionRange(fpos,fpos); }catch(e){} } }
+}
+
+function viewDash(){
+  const s = stats();
+  const per = [["today","Сегодня"],["week","7 дней"],["month","30 дней"],["all","Всё время"]];
+  const maxB = Math.max(1, ...branches().map(b=>Math.max(s.byBranch[b.id].sold, s.byBranch[b.id].red)));
+  const top = Object.entries(s.byStaff).sort((a,b)=>b[1]-a[1]).slice(0,5);
+  return `
+  <div class="hero">
+    <div class="lbl">Не погашено по действующим сертификатам</div>
+    <div class="big disp">${money(s.liab)}</div>
+    <div class="tiny">${s.liabN} действующих${s.expN?" · просрочено "+s.expN+" на "+money(s.exp):""}${s.stock?" · бланков в наличии "+s.stock:""}</div>
+  </div>
+  <div class="wrap" style="margin-top:22px">${per.map(p=>`<button class="chip" data-act="per" data-p="${p[0]}" aria-pressed="${S.period===p[0]}">${p[1]}</button>`).join("")}</div>
+  <div class="kpis">
+    <div class="kpi"><div class="lbl">Продано</div><div class="v">${money(s.sold)}</div><div class="tiny">${s.soldN} шт.</div></div>
+    <div class="kpi"><div class="lbl">Погашено</div><div class="v">${money(s.red)}</div><div class="tiny">${s.redN} операций</div></div>
+    <div class="kpi"><div class="lbl">Средний номинал</div><div class="v">${money(s.soldN?s.sold/s.soldN:0)}</div><div class="tiny">за период</div></div>
+    <div class="kpi"><div class="lbl">Всего в базе</div><div class="v">${S.certs.length}</div><div class="tiny">сертификатов</div></div>
+  </div>
+
+  <div class="sec">Филиалы</div>
+  <div class="card pad">
+    ${branches().map(b=>{ const v=s.byBranch[b.id];
+      return `<div class="brow"><div class="top"><span class="nm">${brName(b.name)}</span><span class="vv">${money(v.sold)}</span></div>
+        <div class="bar" style="margin:8px 0 5px"><i style="width:${Math.round(v.sold/maxB*100)}%"></i></div>
+        <div class="tiny">погашено ${money(v.red)}</div></div>`; }).join("")}
+  </div>
+
+  ${top.length?`<div class="sec">Продажи по администраторам</div>
+  <div class="card pad">${top.map(([n,v])=>`<div class="spread" style="padding:8px 0"><span>${esc(n)}</span><span class="disp" style="font-size:18px">${money(v)}</span></div>`).join("")}</div>`:""}
+
+  <div class="sec">Последние операции</div>
+  ${s.ev.length? '<div class="card pad">'+s.ev.slice(0,14).map(e=>`
+    <div class="fitem">
+      <span>${e.t==="sale"?"Продан":e.t==="red"?"Погашение":"Выпущен бланк"} ${esc(e.cert.number)}
+        <span class="tiny" style="display:block">${brName(branchName(e.branch))} · ${esc(e.who||"—")} · ${dtt(e.at)}</span></span>
+      <span class="amt">${e.t==="red"?"−":""}${money(e.amount)}</span>
+    </div>`).join("")+'</div>'
+    : '<div class="card empty"><b>Пока пусто</b>Продайте первый сертификат — операции появятся здесь.</div>'}`;
+}
+
+function viewCerts(){
+  const list = visibleCerts();
+  const sts = [["all","Все"],["active","Проданные"],["used","Использованные"],["stock","Бланки"],["expired","Просроченные"],["void","Аннулированные"]];
+  return `
+  <div class="spread" style="margin-bottom:18px">
+    <h1 class="disp" style="font-size:27px">Сертификаты <span class="tiny">${list.length} из ${S.certs.length}</span></h1>
+    <div class="row" style="gap:8px"><button class="btn sm" data-act="batch">Выпустить бланки</button>${S.dl?'<button class="btn sm" data-act="csv">CSV</button>':""}</div>
+  </div>
+  <input class="in" data-k="q" data-act="q" placeholder="Номер, имя клиента или телефон" value="${esc(S.q)}" style="margin-bottom:16px">
+  <div class="wrap" style="margin-bottom:8px">${sts.map(x=>`<button class="chip" data-act="fst" data-s="${x[0]}" aria-pressed="${S.fStatus===x[0]}">${x[1]}</button>`).join("")}</div>
+  <div class="wrap" style="margin-bottom:20px">
+    <button class="chip" data-act="fbr" data-b="all" aria-pressed="${S.fBranch==="all"}">Все филиалы</button>
+    ${branches().map(b=>`<button class="chip" data-act="fbr" data-b="${b.id}" aria-pressed="${S.fBranch===b.id}">${brName(b.name)}</button>`).join("")}
+  </div>
+  ${list.length? '<div class="clist">'+list.map(certRow).join("")+'</div>'
+   : '<div class="card empty"><b>Ничего не найдено</b>Измените фильтры или продайте новый сертификат.</div>'}`;
+}
+function certRow(c){
+  const st = statusOf(c), nom=Number(c.nominal)||0, bal=Number(c.balance)||0;
+  const partial = st==="active" && bal<nom;
+  return `<button class="crow" data-act="open" data-id="${esc(c.id)}">
+    <span class="no">${esc(c.number)}</span>
+    <span><span class="nm">${esc(c.clientName||(st==="stock"?"Бланк, не продан":"Без имени"))}</span>
+      <span class="tiny" style="display:block">${brName(branchName(c.soldBranch))}${c.soldByName?" · "+esc(c.soldByName):""}${c.soldAt?" · "+dt(c.soldAt):""}</span></span>
+    <span class="rt"><span class="st ${st}">${ST[st]}</span><span class="amt">${money(bal)}</span>
+      ${nom&&bal!==nom?'<span class="tiny">из '+money(nom)+'</span>':""}</span>
+    ${partial?`<span class="full"><span class="bar"><i style="width:${Math.max(0,Math.min(100,bal/nom*100))}%"></i></span></span>`:""}
+  </button>`;
+}
+
+function viewTeam(){
+  const isOwner = S.me.role==="owner";
+  return `
+  <div class="spread" style="margin-bottom:18px"><h1 class="disp" style="font-size:27px">Команда</h1>
+    ${isOwner?'<button class="btn sm" data-act="addstaff">Добавить</button>':""}</div>
+  <div class="card pad">
+    ${S.staff.slice().sort((a,b)=>String(a.name).localeCompare(String(b.name),"ru")).map(s=>{
+      const sold = S.certs.filter(c=>c.soldById===s.id).reduce((t,c)=>t+(Number(c.nominal)||0),0);
+      return `<div class="spread" style="padding:13px 0;border-bottom:1px solid var(--line-2)">
+        <div><b style="font-weight:500">${esc(s.name)}</b>${s.active===false?' <span class="tiny">— доступ отключён</span>':""}
+          <div class="tiny">${brName(branchName(s.branch))} · ${s.role==="owner"?"владелец":"администратор"} · продал ${money(sold)}</div></div>
+        ${isOwner && s.id!==S.me.id?`<button class="btn sm" data-act="editstaff" data-id="${esc(s.id)}">Изменить</button>`:""}
+      </div>`;}).join("")}
+  </div>
+  <p class="tiny" style="margin-top:16px">PIN защищает от случайных действий на общем компьютере ресепшена. Это не полноценная защита: любой, у кого есть ссылка и доступ к вашей организации, технически может открыть страницу.</p>`;
+}
+
+function viewSettings(){
+  return `
+  <h1 class="disp" style="font-size:27px;margin-bottom:18px">Настройки</h1>
+  <div class="card pad" style="margin-bottom:14px">
+    <div class="lbl" style="margin-bottom:14px">Нумерация</div>
+    <div class="grid2">
+      <label class="f"><span>Префикс номера</span><input class="in" data-k="s-prefix" id="s-prefix" value="${esc(cfg("prefix"))}"></label>
+      <label class="f"><span>Цифр в номере</span><input class="in" data-k="s-pad" id="s-pad" inputmode="numeric" value="${esc(cfg("pad"))}"></label>
+    </div>
+    <label class="f"><span>Срок действия по умолчанию, месяцев</span><input class="in" data-k="s-val" id="s-val" inputmode="numeric" value="${esc(cfg("validityMonths"))}"></label>
+    <div class="tiny" style="margin-bottom:16px">Следующий номер — ${esc(fmtNumber(nextNum()))}</div>
+    <button class="btn primary" data-act="savenum">Сохранить</button>
+  </div>
+  <div class="card pad" style="margin-bottom:14px">
+    <div class="lbl" style="margin-bottom:10px">Филиалы</div>
+    ${branches().map(b=>`<div style="padding:9px 0;border-bottom:1px solid var(--line-2)">${brName(b.name)}</div>`).join("")}
+    <p class="tiny" style="margin:14px 0 0">Названия зафиксированы и не редактируются, чтобы их не менял автоперевод браузера.</p>
+  </div>
+  <div class="card pad">
+    <div class="lbl" style="margin-bottom:10px">Данные</div>
+    <p class="tiny" style="margin:0 0 16px">В базе ${S.certs.length} сертификатов и ${S.staff.length} сотрудников. Выгрузка открывается в Excel.</p>
+    ${S.dl?'<button class="btn" data-act="csv">Выгрузить CSV</button>':'<div class="tiny">Выгрузка недоступна в этом окне.</div>'}
+  </div>`;
+}
+
+/* ---------- окна ---------- */
+let modalKey = null;
+function renderModal(force){
+  const m = S.modal;
+  const key = m ? m.type+":"+(m.id||"")+":"+(m.step||"") : null;
+  if(!force && key===modalKey) return;
+  modalKey = key;
+  const host = $("#modal");
+  if(!m){ host.innerHTML=""; return; }
+  const inner = m.type==="sell" ? mSell(m) : m.type==="redeem" ? mRedeem(m) : m.type==="cert" ? mCert(m)
+             : m.type==="batch" ? mBatch(m) : mStaff(m);
+  host.innerHTML = '<div class="scrim" data-act="scrim"><div class="sheet">'+inner+'</div></div>';
+  const first = host.querySelector("input:not([readonly]), select");
+  if(first && window.matchMedia("(min-width:720px)").matches) first.focus();
+}
+function head(t, sub){
+  return `<div class="sheethead"><div><h2>${t}</h2>${sub?'<div class="tiny">'+sub+'</div>':""}</div><button class="x" data-act="close">✕</button></div>`;
+}
+function branchSelect(id, sel){
+  return `<select class="in" id="${id}">${branches().map(b=>`<option value="${b.id}"${b.id===sel?" selected":""}>${esc(b.name)}</option>`).join("")}</select>`;
+}
+function mSell(m){
+  const stock = S.certs.filter(c=>statusOf(c)==="stock").sort((a,b)=>(a.num||0)-(b.num||0));
+  const exp = isoDate(addMonths(new Date(), Number(cfg("validityMonths"))||12));
+  return head("Продажа сертификата","Продавец — "+esc(S.me.name))+`
+  ${m.err?'<div class="err">'+esc(m.err)+'</div>':""}
+  <label class="f"><span>Номер</span>
+    <select class="in" id="f-cert">
+      <option value="">Новый номер — ${esc(fmtNumber(nextNum()))}</option>
+      ${stock.map(c=>`<option value="${esc(c.id)}"${m.id===c.id?" selected":""}>${esc(c.number)} — бланк в наличии</option>`).join("")}
+    </select></label>
+  <label class="f"><span>Номинал, ₸</span><input class="in" id="f-nominal" inputmode="numeric" placeholder="20000"></label>
+  <div class="wrap" style="margin:-8px 0 18px">${cfg("nominals").map(n=>`<button class="chip" data-act="nom" data-v="${n}">${money(n)}</button>`).join("")}</div>
+  <div class="grid2">
+    <label class="f"><span>Клиент</span><input class="in" id="f-client" placeholder="Имя"></label>
+    <label class="f"><span>Телефон</span><input class="in" id="f-phone" inputmode="tel" placeholder="+7"></label>
+  </div>
+  <div class="grid2">
+    <label class="f"><span>Филиал продажи</span>${branchSelect("f-branch", S.me.branch)}</label>
+    <label class="f"><span>Действует до</span><input class="in" id="f-exp" type="date" value="${exp}"></label>
+  </div>
+  <label class="f"><span>Комментарий</span><input class="in" id="f-note" placeholder="Например, подарок на день рождения"></label>
+  <button class="btn primary" data-act="dosell" style="width:100%;margin-top:8px">Оформить продажу</button>`;
+}
+function mBatch(m){
+  return head("Выпуск бланков","Номера пойдут подряд с "+esc(fmtNumber(nextNum())))+`
+  ${m.err?'<div class="err">'+esc(m.err)+'</div>':""}
+  <div class="grid2">
+    <label class="f"><span>Сколько бланков</span><input class="in" id="b-count" inputmode="numeric" value="10"></label>
+    <label class="f"><span>Номинал, ₸</span><input class="in" id="b-nominal" inputmode="numeric" placeholder="20000"></label>
+  </div>
+  <label class="f"><span>Филиал</span>${branchSelect("b-branch", S.me.branch)}</label>
+  <button class="btn primary" data-act="dobatch" style="width:100%;margin-top:8px">Выпустить</button>
+  <p class="tiny" style="margin-top:14px">Бланки лежат в статусе «бланк», пока их не продадут. Так номера на распечатанных сертификатах совпадают с базой.</p>`;
+}
+function mRedeem(m){
+  const c = m.id ? S.certs.find(x=>x.id===m.id) : (m.q ? findByNumber(m.q) : null);
+  const st = c ? statusOf(c) : null;
+  return head("Погашение","Проводит — "+esc(S.me.name))+`
+  ${m.err?'<div class="err">'+esc(m.err)+'</div>':""}
+  <label class="f"><span>Номер сертификата</span><input class="in" data-k="r-q" id="r-q" data-act="rq" value="${esc(m.q||(c?c.number:""))}" placeholder="MB-0001"></label>
+  ${!c ? '<p class="tiny">Введите номер полностью или только цифры.</p>' : `
+    <div style="border-top:1px solid var(--line);padding-top:16px;margin-bottom:18px">
+      <div class="spread"><span class="disp" style="font-size:22px">${esc(c.number)}</span><span class="st ${st}">${ST[st]}</span></div>
+      <div class="tiny">${esc(c.clientName||"Без имени")}${c.clientPhone?" · "+esc(c.clientPhone):""}</div>
+      <div class="spread" style="margin-top:12px"><span class="lbl">Остаток</span><span class="disp" style="font-size:26px">${money(c.balance)}</span></div>
+      <div class="bar" style="margin-top:8px"><i style="width:${Math.max(0,Math.min(100,(Number(c.balance)||0)/(Number(c.nominal)||1)*100))}%"></i></div>
+      ${c.expiresAt?'<div class="tiny" style="margin-top:8px">Действует до '+dt(c.expiresAt)+'</div>':""}
+    </div>
+    <label class="f"><span>Сумма списания, ₸</span><input class="in" id="r-amt" inputmode="numeric" placeholder="${Math.round(Number(c.balance)||0)}"></label>
+    <div class="wrap" style="margin:-8px 0 18px">
+      <button class="chip" data-act="ramt" data-v="${Number(c.balance)||0}">Весь остаток</button>
+      <button class="chip" data-act="ramt" data-v="${Math.round((Number(c.balance)||0)/2)}">Половина</button>
+    </div>
+    <div class="grid2">
+      <label class="f"><span>Филиал</span>${branchSelect("r-branch", S.me.branch)}</label>
+      <label class="f"><span>Услуга или комментарий</span><input class="in" id="r-note" placeholder="Например, окрашивание"></label>
+    </div>
+    <button class="btn primary" data-act="doredeem" data-id="${esc(c.id)}" style="width:100%;margin-top:8px">Списать с сертификата</button>`}`;
+}
+function mCert(m){
+  const c = S.certs.find(x=>x.id===m.id);
+  if(!c) return head("Сертификат")+'<div class="empty">Не найден</div>';
+  const st = statusOf(c), nom=Number(c.nominal)||0, bal=Number(c.balance)||0;
+  const used = (c.redemptions||[]).reduce((s,r)=>s+(Number(r.amount)||0),0);
+  const kv = [["Номинал",money(nom)],["Использовано",money(used)],["Клиент",(c.clientName||"—")+(c.clientPhone?" · "+c.clientPhone:"")],
+    ["Продал",c.soldByName||"—"],["Филиал продажи",branchName(c.soldBranch)],["Дата продажи",c.soldAt?dt(c.soldAt):"—"],
+    ["Действует до",c.expiresAt?dt(c.expiresAt):"без срока"]];
+  return head(esc(c.number), '<span class="st '+st+'">'+ST[st]+'</span>')+`
+  ${m.err?'<div class="err">'+esc(m.err)+'</div>':""}
+  <div class="lbl">Остаток</div>
+  <div class="disp" style="font-size:44px;line-height:1.05;margin:4px 0 10px">${money(bal)}</div>
+  <div class="bar"><i style="width:${nom?Math.max(0,Math.min(100,bal/nom*100)):0}%"></i></div>
+  <div class="tiny" style="margin-top:6px">из ${money(nom)}</div>
+  <div class="card pad" style="margin:20px 0">
+    ${kv.map(r=>`<div class="kv"><span class="tiny">${esc(r[0])}</span><span>${esc(r[1])}</span></div>`).join("")}
+    ${c.note?'<p class="tiny" style="margin:10px 0 0">'+esc(c.note)+'</p>':""}
+  </div>
+  <div class="lbl" style="margin-bottom:6px">История</div>
+  <div class="card pad">
+    ${c.createdAt?`<div class="hev"><span>Выпущен<span class="tiny" style="display:block">${esc(c.createdByName||"—")} · ${dtt(c.createdAt)}</span></span><span></span></div>`:""}
+    ${c.soldAt?`<div class="hev"><span>Продан<span class="tiny" style="display:block">${esc(c.soldByName||"—")} · ${brName(branchName(c.soldBranch))} · ${dtt(c.soldAt)}</span></span><span class="disp" style="font-size:18px">${money(nom)}</span></div>`:""}
+    ${(c.redemptions||[]).map(r=>`<div class="hev"><span>Погашение<span class="tiny" style="display:block">${esc(r.byName||"—")} · ${brName(branchName(r.branch))} · ${dtt(r.at)}${r.note?" · "+esc(r.note):""}</span></span><span class="disp" style="font-size:18px">−${money(r.amount)}</span></div>`).join("")}
+    ${c.voidedAt?`<div class="hev"><span>Аннулирован<span class="tiny" style="display:block">${esc(c.voidedByName||"—")} · ${dtt(c.voidedAt)}</span></span><span></span></div>`:""}
+  </div>
+  <div class="wrap" style="margin-top:22px">
+    ${st==="active"||st==="expired"?`<button class="btn primary" data-act="redeem" data-id="${esc(c.id)}">Погасить</button>`:""}
+    ${st==="stock"?`<button class="btn primary" data-act="sell" data-id="${esc(c.id)}">Оформить продажу</button>`:""}
+    ${st!=="void"?`<button class="btn sm" data-act="extend" data-id="${esc(c.id)}">Продлить срок</button>`:""}
+    ${st!=="void"&&S.me.role==="owner"?`<button class="btn sm danger" data-act="void" data-id="${esc(c.id)}">Аннулировать</button>`:""}
+  </div>`;
+}
+function mStaff(m){
+  const s = m.id ? S.staff.find(x=>x.id===m.id) : null;
+  return head(s?"Сотрудник":"Новый сотрудник")+`
+  ${m.err?'<div class="err">'+esc(m.err)+'</div>':""}
+  <label class="f"><span>Имя и фамилия</span><input class="in" id="t-name" value="${esc(s?s.name:"")}"></label>
+  <label class="f"><span>Филиал</span>${branchSelect("t-branch", s?s.branch:S.me.branch)}</label>
+  <label class="f"><span>Роль</span><select class="in" id="t-role">
+    <option value="admin"${s&&s.role==="admin"?" selected":""}>Администратор</option>
+    <option value="owner"${s&&s.role==="owner"?" selected":""}>Владелец — настройки и аннулирование</option></select></label>
+  <p class="tiny" style="margin:-4px 0 16px">Почта и пароль задаются в панели Supabase, в разделе Authentication. Здесь — имя, филиал и роль.</p>
+  <div class="wrap" style="margin-top:8px">
+    <button class="btn primary" data-act="savestaff" data-id="${esc(s?s.id:"")}">Сохранить</button>
+    ${s?`<button class="btn ${s.active===false?"":"danger"}" data-act="togglestaff" data-id="${esc(s.id)}">${s.active===false?"Включить доступ":"Отключить доступ"}</button>`:""}
+  </div>`;
+}
+
+/* ---------- события ---------- */
+function val(id){ const el=document.getElementById(id); return el?el.value.trim():""; }
+function numval(id){ return Math.round(Number(String(val(id)).replace(/[^\d.]/g,""))||0); }
+
+document.addEventListener("click", async ev=>{
+  const t = ev.target.closest("[data-act]"); if(!t) return;
+  const a = t.dataset.act;
+  if(a==="scrim" && ev.target!==t) return;
+  if(S.busy && ["dosell","doredeem","dobatch","savestaff","dologin"].includes(a)) return;
+  try{
+    if(a==="dologin"){
+      const email = val("l-email"), pass = val("l-pass");
+      if(!email || !pass){ S.gate.err="Введите почту и пароль."; S.gate.email=email; render(); return; }
+      S.busy=true; t.disabled=true;
+      const { error } = await sb.auth.signInWithPassword({email, password:pass});
+      S.busy=false;
+      if(error){
+        S.gate.email=email;
+        S.gate.err = /Invalid login/i.test(error.message) ? "Неверная почта или пароль." : error.message;
+        render(); return;
+      }
+      S.gate={email:"", err:""};
+      await refresh(); return;
+    }
+    if(a==="logout"){
+      await sb.auth.signOut();
+      S.me=null; S.certs=[]; S.boot="ok"; S.gate={email:"", err:""}; closeModal(); render(); return;
+    }
+    if(a==="theme"){
+      const cur = document.documentElement.getAttribute("data-theme");
+      const dark = cur ? cur==="dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.setAttribute("data-theme", dark?"light":"dark"); ls("mb_theme", dark?"light":"dark"); return;
+    }
+    if(a==="nav"){ S.view=t.dataset.v; closeModal(); render(); window.scrollTo(0,0); return; }
+    if(a==="per"){ S.period=t.dataset.p; render(); return; }
+    if(a==="fst"){ S.fStatus=t.dataset.s; render(); return; }
+    if(a==="fbr"){ S.fBranch=t.dataset.b; render(); return; }
+    if(a==="csv"){ exportCsv(); return; }
+    if(a==="close"||a==="scrim"){ closeModal(); return; }
+    if(a==="open"){ openModal({type:"cert", id:t.dataset.id}); return; }
+    if(a==="sell"){ openModal({type:"sell", id:t.dataset.id||""}); return; }
+    if(a==="redeem"){ openModal({type:"redeem", id:t.dataset.id||"", q:""}); return; }
+    if(a==="batch"){ openModal({type:"batch"}); return; }
+    if(a==="addstaff"){ openModal({type:"staff"}); return; }
+    if(a==="editstaff"){ openModal({type:"staff", id:t.dataset.id}); return; }
+    if(a==="nom"){ const el=document.getElementById("f-nominal"); if(el) el.value=t.dataset.v; return; }
+    if(a==="ramt"){ const el=document.getElementById("r-amt"); if(el) el.value=t.dataset.v; return; }
+
+    if(a==="dosell"){
+      const nominal=numval("f-nominal");
+      if(nominal<=0){ S.modal.err="Укажите номинал сертификата."; renderModal(true); return; }
+      S.busy=true; t.disabled=true;
+      const no = await doSell({certId:val("f-cert"), nominal, clientName:val("f-client"), clientPhone:val("f-phone"),
+        branch:val("f-branch"), expiresAt:val("f-exp"), note:val("f-note")});
+      S.busy=false; closeModal(); flash("Сертификат "+no+" продан"); return;
+    }
+    if(a==="dobatch"){
+      const count=numval("b-count"), nominal=numval("b-nominal");
+      if(count<1||count>200){ S.modal.err="От 1 до 200 бланков за раз."; renderModal(true); return; }
+      if(nominal<=0){ S.modal.err="Укажите номинал."; renderModal(true); return; }
+      S.busy=true; t.disabled=true;
+      const n = await doIssueBatch(count, nominal, val("b-branch"));
+      S.busy=false; closeModal(); flash("Выпущено бланков: "+n); return;
+    }
+    if(a==="doredeem"){
+      const c = S.certs.find(x=>x.id===t.dataset.id), amt = numval("r-amt");
+      if(amt<=0){ S.modal.err="Укажите сумму списания."; renderModal(true); return; }
+      S.busy=true; t.disabled=true;
+      try{
+        const left = await doRedeem(c, amt, val("r-branch"), val("r-note"));
+        S.busy=false; closeModal();
+        flash(left>0 ? "Списано "+money(amt)+", остаток "+money(left) : "Сертификат погашен полностью");
+      }catch(e){ S.busy=false; S.modal.err=e.message; renderModal(true); }
+      return;
+    }
+    if(a==="void"){
+      const c = S.certs.find(x=>x.id===t.dataset.id);
+      if(!confirm("Аннулировать сертификат "+c.number+"? Остаток сгорит.")) return;
+      await rpc("void_certificate", {p_cert_id:Number(c.id)}); await refresh();
+      flash("Сертификат аннулирован"); renderModal(true); return;
+    }
+    if(a==="extend"){
+      const c = S.certs.find(x=>x.id===t.dataset.id);
+      const v = prompt("Новая дата окончания в формате ГГГГ-ММ-ДД:", c.expiresAt?isoDate(c.expiresAt):isoDate(addMonths(new Date(),12)));
+      if(!v) return;
+      if(!/^\d{4}-\d{2}-\d{2}$/.test(v)){ flash("Формат даты: 2027-01-31", true); return; }
+      await rpc("extend_certificate", {p_cert_id:Number(c.id), p_expires_at:v}); await refresh();
+      flash("Срок продлён до "+dt(v)); renderModal(true); return;
+    }
+    if(a==="savestaff"){
+      const id=t.dataset.id, name=val("t-name");
+      if(!id){ S.modal.err="Сначала заведите сотрудника в панели Supabase: Authentication → Add user. После его первого входа карточка появится здесь."; renderModal(true); return; }
+      if(name.length<2){ S.modal.err="Укажите имя."; renderModal(true); return; }
+      S.busy=true;
+      const { error } = await sb.from("staff").update({name, branch:val("t-branch"), role:val("t-role")}).eq("id", id);
+      S.busy=false;
+      if(error){ S.modal.err=error.message; renderModal(true); return; }
+      await refresh(); closeModal(); flash("Сохранено"); return;
+    }
+    if(a==="togglestaff"){
+      const s = S.staff.find(x=>x.id===t.dataset.id);
+      const { error } = await sb.from("staff").update({active: s.active===false}).eq("id", s.id);
+      if(error){ S.modal.err=error.message; renderModal(true); return; }
+      await refresh(); closeModal(); flash(s.active===false?"Доступ включён":"Доступ отключён"); return;
+    }
+    if(a==="savenum"){
+      const { error } = await sb.from("settings").update({prefix:val("s-prefix"),
+        pad:Math.max(2,Math.min(8,numval("s-pad")||4)), validity_months:Math.max(1,numval("s-val")||12)}).eq("id",1);
+      if(error){ flash(error.message, true); return; }
+      await refresh(); flash("Настройки сохранены"); return;
+    }
+  }catch(e){
+    S.busy=false;
+    const msg = (e && e.message) || "Что-то пошло не так";
+    if(S.modal){ S.modal.err=msg; renderModal(true); } else flash(msg, true);
+  }
+});
+document.addEventListener("input", e=>{
+  const t = e.target.closest("[data-act]"); if(!t) return;
+  if(t.dataset.act==="q"){ S.q=t.value; render(); }
+  if(t.dataset.act==="rq"){ S.modal.q=t.value; S.modal.id=""; renderModal(true); }
+});
+document.addEventListener("keydown", e=>{
+  if(e.key==="Escape" && S.modal) closeModal();
+  if(e.key==="Enter" && !S.me){ const b=document.querySelector('[data-act="dologin"]'); if(b) b.click(); }
+});
+(function init(){ const th = ls("mb_theme"); if(th) document.documentElement.setAttribute("data-theme", th); start(); })();
+
+</script>
+</body>
+</html>

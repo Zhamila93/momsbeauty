@@ -1,0 +1,1295 @@
+<!doctype html>
+<html lang="ru" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="google" content="notranslate">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mom's Beauty — сертификаты</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F7F3EA; --card:#FFFFFF; --card-2:#F4EFE3;
+  --ink:#16201A; --ink-2:#5A6A5E; --ink-3:#8D9A90;
+  --line:#E2DACA; --line-2:#EFE9DC;
+  --camel:#B08A2E;
+  --brand:#14432B; --brand-2:#1C5C3A; --brand-ink:#F6F1E3;
+  --gold:#C9A227; --gold-soft:#FBF3DC;
+  --btn-bg:#14432B; --btn-fg:#FBF7EC;
+  --ok:#1F7A4D; --ok-soft:#E1F2E7;
+  --warn:#D08A16; --warn-soft:#FCEFD6;
+  --dead:#121512; --dead-soft:#DED8CC;
+  --gone:#9AA69C;
+  --rust:#A33B2A;
+  --sh:0 1px 2px rgba(20,40,28,.05), 0 10px 26px rgba(20,40,28,.06);
+  --r:4px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0C1310; --card:#141D18; --card-2:#1A251F;
+    --ink:#F0EADC; --ink-2:#A8B5AC; --ink-3:#7C8A81;
+    --line:#26332C; --line-2:#1E2A23;
+    --camel:#D9B94A;
+    --brand:#0F3322; --brand-2:#1A4A2F; --brand-ink:#F3EEDF;
+    --gold:#D9B94A; --gold-soft:#2A2415;
+    --btn-bg:#D9B94A; --btn-fg:#12190F;
+    --ok:#5FBE8B; --ok-soft:#16281E;
+    --warn:#E8B45C; --warn-soft:#2B2213;
+    --dead:#D6D0C2; --dead-soft:#1E2A23;
+    --gone:#7C8A81;
+    --rust:#DE7A63;
+    --sh:0 1px 2px rgba(0,0,0,.4), 0 10px 26px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+    --paper:#0C1310; --card:#141D18; --card-2:#1A251F;
+  --ink:#F0EADC; --ink-2:#A8B5AC; --ink-3:#7C8A81;
+  --line:#26332C; --line-2:#1E2A23;
+  --camel:#D9B94A;
+  --brand:#0F3322; --brand-2:#17son4A2F; --brand-ink:#F3EEDF;
+  --gold:#D9B94A; --gold-soft:#2A2415;
+  --btn-bg:#D9B94A; --btn-fg:#12190F;
+  --ok:#5FBE8B; --ok-soft:#16281E;
+  --warn:#E8B45C; --warn-soft:#2B2213;
+  --dead:#D6D0C2; --dead-soft:#1E2A23;
+  --gone:#7C8A81;
+  --rust:#DE7A63;
+  --sh:0 1px 2px rgba(0,0,0,.4), 0 10px 26px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);
+  font-family:Manrope,ui-sans-serif,system-ui,-apple-system,sans-serif;
+  font-size:14.5px;line-height:1.55;letter-spacing:.004em;
+  -webkit-text-size-adjust:100%;font-variant-numeric:tabular-nums}
+h1,h2,h3{margin:0;font-weight:500}
+button,input,select,textarea{font:inherit;color:inherit}
+.disp{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300}
+.lbl{font-size:11.5px;letter-spacing:.05em;color:var(--ink-3);font-weight:500}
+.tiny{font-size:12px;color:var(--ink-3)}
+.muted{color:var(--ink-2)}
+
+.shell{display:block;min-height:100dvh}
+.rail{display:none}
+.main{padding:16px 16px 104px;max-width:1120px;margin:0 auto}
+@media (min-width:980px){
+  .shell{display:grid;grid-template-columns:250px minmax(0,1fr);align-items:start}
+  .rail{display:block;position:sticky;top:0;height:100dvh;border-right:0;padding:30px 18px;background:var(--brand);color:var(--brand-ink)}
+  .main{padding:34px 44px 70px}
+  .tabbar{display:none!important}
+}
+.brand b{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;font-size:23px;line-height:1.1}
+.brand span{display:block;font-size:11px;letter-spacing:.07em;opacity:.7;margin-top:3px}
+.brand{margin-bottom:30px}
+.navlink{display:block;width:100%;text-align:left;padding:10px 12px;margin-bottom:2px;border:0;border-radius:var(--r);
+  background:transparent;cursor:pointer;color:inherit;opacity:.78;font-size:14px}
+.navlink:hover{opacity:1;background:rgba(255,255,255,.08)}
+.navlink[aria-current="true"]{opacity:1;background:rgba(255,255,255,.16);font-weight:500}
+.navlink i{font-style:normal;display:inline-block;width:22px}
+.railacts{margin-top:24px;padding-top:20px;border-top:1px solid var(--line);display:grid;gap:8px}
+.railfoot{position:absolute;bottom:24px;left:18px;right:18px;border-top:1px solid rgba(255,255,255,.18);padding-top:14px}
+.rail .tiny,.rail .btn.ghost{color:inherit;opacity:.75}
+.topbar{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+@media (min-width:980px){.topbar{display:none}}
+.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:repeat(5,1fr);
+  background:var(--card);border-top:1px solid var(--line);padding:8px 4px calc(8px + env(safe-area-inset-bottom))}
+.tab{border:0;background:transparent;padding:5px 2px;font-size:11px;color:var(--ink-3);cursor:pointer}
+.tab[aria-current="true"]{color:var(--ink)}
+.tab.accent{color:var(--brand-2)}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh)}
+.pad{padding:18px}
+.row{display:flex;align-items:center;gap:10px}
+.spread{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.wrap{display:flex;flex-wrap:wrap;gap:7px}
+.sec{margin:28px 0 10px;font-size:11.5px;letter-spacing:.09em;color:var(--brand-2);font-weight:600;text-transform:uppercase}
+.btn{border:1px solid var(--line);background:transparent;border-radius:var(--r);padding:10px 18px;font-size:13.5px;font-weight:500;
+  cursor:pointer;display:inline-flex;gap:8px;align-items:center;justify-content:center;white-space:nowrap}
+.btn:hover{border-color:var(--ink-3)}
+.btn.primary{background:var(--btn-bg);border-color:var(--btn-bg);color:var(--btn-fg);box-shadow:var(--sh)}
+.btn.primary:hover{background:var(--brand-2);border-color:var(--brand-2)}
+.btn.ghost{border-color:transparent;color:var(--ink-2);padding:8px 0}
+.btn.danger{color:var(--rust)}
+.btn.sm{padding:7px 13px;font-size:12.5px}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.chip{border:1px solid var(--line);background:transparent;border-radius:var(--r);padding:6px 13px;font-size:12.5px;cursor:pointer;color:var(--ink-2)}
+.chip[aria-pressed="true"]{border-color:var(--brand);background:var(--brand);color:var(--brand-ink)}
+label.f{display:block;margin-bottom:15px}
+label.f>span{display:block;font-size:11.5px;letter-spacing:.045em;color:var(--ink-3);margin-bottom:6px;font-weight:500}
+.in{width:100%;padding:10px 0;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;font-size:15px}
+.in:focus{outline:0;border-bottom-color:var(--gold);box-shadow:0 1px 0 var(--gold)}
+select.in{appearance:none;padding-right:22px;
+  background-image:linear-gradient(45deg,transparent 50%,var(--ink-3) 50%),linear-gradient(135deg,var(--ink-3) 50%,transparent 50%);
+  background-position:calc(100% - 9px) 19px,calc(100% - 5px) 19px;background-size:4px 4px;background-repeat:no-repeat}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 22px}
+@media (max-width:560px){.grid2{grid-template-columns:1fr}}
+.bar{height:3px;background:var(--line-2);border-radius:2px;overflow:hidden}
+.bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--brand-2),var(--gold))}
+.empty{text-align:center;padding:48px 20px;color:var(--ink-2)}
+.empty b{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;font-size:21px;color:var(--ink);margin-bottom:6px}
+.err{border-left:2px solid var(--rust);color:var(--rust);padding:8px 0 8px 12px;font-size:13px;margin-bottom:16px}
+
+.hero{border-bottom:1px solid var(--line);padding-bottom:24px}
+.hero .big{color:var(--brand);font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;font-size:clamp(2.8rem,12vw,4.8rem);line-height:1;margin:10px 0 8px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:20px}
+.kpi{background:var(--card);padding:16px 17px}
+.kpis{box-shadow:var(--sh)}
+.kpi .v{color:var(--brand)}
+.kpi .v{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;font-size:25px;line-height:1.15;margin-top:4px}
+.brow{padding:13px 0;border-bottom:1px solid var(--line-2)}
+.brow:last-child{border-bottom:0}
+.brow .top{display:flex;justify-content:space-between;gap:14px;align-items:baseline}
+.brow .vv{font-family:"Cormorant Garamond",Georgia,serif;font-size:19px}
+.fitem{display:grid;grid-template-columns:1fr auto;gap:3px 14px;padding:12px 0;border-bottom:1px solid var(--line-2);align-items:baseline}
+.fitem:last-child{border-bottom:0}
+.fitem .amt{font-family:"Cormorant Garamond",Georgia,serif;font-size:18px}
+.kv{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid var(--line-2)}
+.kv:last-child{border-bottom:0}
+
+/* список сертификатов с цветом */
+.clist{border-top:1px solid var(--line)}
+.crow{display:grid;grid-template-columns:minmax(92px,auto) minmax(0,1fr) auto;gap:3px 16px;align-items:center;
+  width:100%;text-align:left;padding:14px 14px 14px 12px;border:0;border-bottom:1px solid var(--line-2);
+  border-left:3px solid transparent;background:transparent;cursor:pointer;font:inherit;color:inherit}
+.crow:hover{background:var(--card-2)}
+.crow{background:var(--card)}
+.clist{box-shadow:var(--sh);border-radius:var(--r);overflow:hidden}
+.crow.s-active{border-left-color:var(--ok)}
+.crow .no{color:var(--brand)}
+.crow.s-partial{border-left-color:var(--warn)}
+.crow.s-expired{border-left-color:var(--dead)}
+.crow.s-used,.crow.s-void,.crow.s-stock{border-left-color:var(--line)}
+.crow .no{font-family:"Cormorant Garamond",Georgia,serif;font-size:21px}
+.crow .nm{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.crow .rt{text-align:right}
+.crow .amt{font-family:"Cormorant Garamond",Georgia,serif;font-size:19px;display:block;margin-top:2px}
+.crow .full{grid-column:1/-1;margin-top:8px}
+@media (max-width:560px){.crow{grid-template-columns:1fr auto}.crow .no{font-size:19px}}
+.st{font-size:11.5px;letter-spacing:.03em;white-space:nowrap;display:inline-flex;align-items:center;gap:6px}
+.st:before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;flex:none}
+.st.active{color:var(--ok)}
+.st.partial{color:var(--warn)}
+.st.expired{color:var(--dead)}
+.st.used,.st.void,.st.stock{color:var(--gone)}
+.legend{display:flex;flex-wrap:wrap;gap:14px;padding:12px 14px;margin-bottom:14px;border:1px solid var(--line);border-radius:var(--r);background:var(--card)}
+
+.scrim{position:fixed;inset:0;background:rgba(24,21,17,.42);z-index:60;display:flex;align-items:flex-end;justify-content:center}
+@media (min-width:720px){.scrim{align-items:center;padding:26px}}
+.sheet{background:var(--card);width:100%;max-width:540px;max-height:92dvh;overflow:auto;border:1px solid var(--line);
+  border-radius:var(--r) var(--r) 0 0;padding:22px 20px calc(26px + env(safe-area-inset-bottom))}
+@media (min-width:720px){.sheet{border-radius:var(--r);padding:30px}}
+.sheethead{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.sheethead h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;font-size:25px;line-height:1.15}
+.x{border:0;background:transparent;cursor:pointer;font-size:17px;color:var(--ink-3);padding:0 2px}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(84px + env(safe-area-inset-bottom));z-index:80;
+  background:var(--btn-bg);color:var(--btn-fg);padding:12px 20px;border-radius:var(--r);font-size:13.5px;max-width:92vw}
+@media (min-width:980px){.toast{bottom:30px}}
+.toast.bad{background:var(--rust);color:#fff}
+
+.gift{background:linear-gradient(135deg,var(--brand) 0%,var(--brand-2) 62%,#236B44 100%);
+  color:var(--brand-ink);border-radius:var(--r);padding:24px 22px;margin-bottom:18px;
+  box-shadow:0 14px 34px rgba(16,48,32,.28);border:1px solid rgba(201,162,39,.45);position:relative;overflow:hidden}
+.gift:after{content:"";position:absolute;inset:8px;border:1px solid rgba(201,162,39,.30);border-radius:2px;pointer-events:none}
+.gift .cap{color:var(--gold)}
+.gift .num{color:#fff}
+.gift .cap{font-size:10.5px;letter-spacing:.2em;opacity:.95;font-weight:600}
+.gift .num{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;font-size:52px;line-height:1.02;margin-top:4px}
+.gift .cells{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:14px;margin-top:18px;
+  border-top:1px solid rgba(255,255,255,.22);padding-top:14px}
+.gift .cells .lbl{color:inherit;opacity:.72}
+.gift .cells b{display:block;font-weight:500;font-size:15px;margin-top:3px}
+.kindtabs{display:inline-flex;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-bottom:16px}
+.kindtabs button{border:0;background:transparent;padding:9px 16px;font-size:13px;cursor:pointer;color:var(--ink-2)}
+.kindtabs button[aria-pressed="true"]{background:var(--brand);color:var(--brand-ink)}
+.gate{min-height:100dvh;display:grid;place-items:center;padding:26px}
+.gatecard{width:100%;max-width:400px}
+.gbrand{text-align:center;margin-bottom:30px}
+.gbrand b{display:block;color:var(--brand);font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;font-size:34px;line-height:1.05}
+.gbrand span{display:block;font-size:11px;letter-spacing:.09em;color:var(--ink-3);margin-top:7px}
+.gtabs{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line);margin-bottom:22px}
+.gtab{border:0;background:transparent;padding:11px 0;cursor:pointer;color:var(--ink-3);font-size:14px;border-bottom:2px solid transparent;margin-bottom:-1px}
+.gtab[aria-current="true"]{color:var(--brand);border-bottom-color:var(--gold);font-weight:600}
+</style>
+</head>
+<body class="notranslate" translate="no">
+<div id="root"><div class="gate"><div class="tiny">Загрузка…</div></div></div>
+<div id="modal"></div>
+<div id="toast"></div>
+
+<script>
+"use strict";
+const $ = s => document.querySelector(s);
+const esc = s => String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const money = n => new Intl.NumberFormat("ru-RU").format(Math.round(Number(n)||0)) + " ₸";
+const dfmt = new Intl.DateTimeFormat("ru-RU",{day:"2-digit",month:"short",year:"2-digit"});
+const dtfmt = new Intl.DateTimeFormat("ru-RU",{day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"});
+const dt = s => { const d=new Date(s); return isNaN(d)?"—":dfmt.format(d); };
+const dtt = s => { const d=new Date(s); return isNaN(d)?"—":dtfmt.format(d); };
+const sleep = ms => new Promise(r=>setTimeout(r,ms));
+const safeId = s => String(s).replace(/[^A-Za-z0-9_\-.~:@+]/g,"-").slice(0,60) || "x";
+function ls(k,v){ try{ if(v===undefined) return localStorage.getItem(k); localStorage.setItem(k,v);}catch(e){} }
+function ss(k,v){ try{ if(v===undefined) return sessionStorage.getItem(k); if(v===null) sessionStorage.removeItem(k); else sessionStorage.setItem(k,v);}catch(e){} }
+async function hashPass(pass, salt){
+  const h = await crypto.subtle.digest("SHA-256", new TextEncoder().encode("mb2:"+salt+":"+pass));
+  return [...new Uint8Array(h)].map(b=>b.toString(16).padStart(2,"0")).join("");
+}
+function addMonths(d,m){ const x=new Date(d); const day=x.getDate(); x.setMonth(x.getMonth()+m); if(x.getDate()<day) x.setDate(0); return x; }
+function isoDate(d){ const x=new Date(d); return new Date(x.getTime()-x.getTimezoneOffset()*60000).toISOString().slice(0,10); }
+function nt(n){ return '<span translate="no" class="notranslate">'+esc(n)+'</span>'; }
+
+const BRANCHES = [
+  {id:"first",  name:"Mom's Beauty Mangilik El"},
+  {id:"turan",  name:"Mom's Beauty Turan"},
+  {id:"privat", name:"Mom's Private"}
+];
+const OLD_BRANCHES = { prouve:"Mom's Beauty Prouve", first:"Mom's Beauty Mangilik El", privat:"Mom's Private" };
+const DEFAULTS = { validityMonths:12, nominals:[10000,20000,30000,50000,100000], signupCode:"MOMS2026" };
+
+const S = {
+  db:null, dl:null, boot:"loading", bootMsg:"",
+  staff:[], certs:[], log:[], settings:null, loaded:{staff:false,certs:false},
+  me:null, seeded:false, sig:{staff:"",certs:"",log:"",settings:""}, gate:{tab:"login", err:""},
+  view:"home", period:"month", from:"", to:"", q:"", fStatus:"all", fBranch:"all", fKind:"all", det:false,
+  modal:null, busy:false
+};
+const lease = () => (ss("mb_tab") || (ss("mb_tab", Math.random().toString(36).slice(2)), ss("mb_tab")));
+function branchName(id){ const b = BRANCHES.find(b=>b.id===id); return b?b.name:(OLD_BRANCHES[id]||id||"—"); }
+function allBranches(){
+  const seen = new Set(BRANCHES.map(b=>b.id));
+  const extra = [];
+  const add = id => { if(id && !seen.has(id)){ seen.add(id); extra.push({id, name:branchName(id)}); } };
+  for(const c of S.certs){ add(c.soldBranch); for(const r of (c.redemptions||[])) add(r.branch); }
+  return BRANCHES.concat(extra);
+}
+function cfg(k){ const s=S.settings||{}; return (s[k]!==undefined && s[k]!==null && s[k]!=="") ? s[k] : DEFAULTS[k]; }
+
+function statusOf(c){
+  if(c.status==="void") return "void";
+  if(c.status==="stock") return "stock";
+  const bal=Number(c.balance)||0, nom=Number(c.nominal)||0;
+  if(bal<=0) return "used";
+  if(c.expiresAt && new Date(c.expiresAt) < new Date(new Date().toDateString())) return "expired";
+  if(nom && bal<nom) return "partial";
+  return "active";
+}
+const ST = {active:"Действует", partial:"Есть остаток", expired:"Срок истёк", used:"Использован", stock:"Бланк", void:"Аннулирован"};
+
+const SUPA_URL = "https://orvrktlwdgzojblugmdm.supabase.co";
+const SUPA_KEY = "sb_publishable_Wp35YfV7Rp6umwVXqie33g_BQzLcN_b";
+function makeSupaDB(){
+  const base = SUPA_URL + "/rest/v1/mb_docs";
+  const H = { "apikey":SUPA_KEY, "Authorization":"Bearer "+SUPA_KEY, "Content-Type":"application/json" };
+  const subs = [];
+  let timer = null;
+  const refresh = ()=> subs.slice().forEach(f=>{ try{ f(); }catch(e){} });
+  const tickPoll = ()=>{ if(!timer) timer = setInterval(refresh, 5000); };
+  async function rowsFor(prefix){
+    const r = await fetch(base+"?path=like."+encodeURIComponent(prefix+"%")+"&select=path,data", {headers:H});
+    if(!r.ok) throw new Error("Нет связи с базой ("+r.status+")");
+    return r.json();
+  }
+  async function one(path){
+    const r = await fetch(base+"?path=eq."+encodeURIComponent(path)+"&select=path,data", {headers:H});
+    if(!r.ok) throw new Error("Нет связи с базой ("+r.status+")");
+    const a = await r.json();
+    return a[0] ? a[0].data : null;
+  }
+  async function put(path, data){
+    const r = await fetch(base, {method:"POST",
+      headers:Object.assign({}, H, {"Prefer":"resolution=merge-duplicates,return=minimal"}),
+      body: JSON.stringify({path, data, updated_at:new Date().toISOString()})});
+    if(!r.ok) throw new Error("Не удалось сохранить ("+r.status+")");
+    refresh();
+  }
+  return {
+    async redeemRpc(path, amount, entry){
+      const r = await fetch(SUPA_URL+"/rest/v1/rpc/mb_redeem", {method:"POST", headers:H,
+        body: JSON.stringify({p_path:path, p_amount:amount, p_entry:entry})});
+      const txt = await r.text();
+      if(!r.ok){
+        let msg = txt;
+        try{ msg = JSON.parse(txt).message || txt; }catch(e){}
+        throw new Error(msg || "Не удалось провести списание");
+      }
+      refresh();
+      return JSON.parse(txt);
+    },
+    doc(path){
+      return {
+        async get(){ const d = await one(path); return {exists:!!d, data:()=>d||{}}; },
+        async set(v){ await put(path, v); return true; },
+        async update(v){ const d = await one(path) || {}; await put(path, Object.assign({}, d, v)); return true; },
+        async delete(){
+          const r = await fetch(base+"?path=eq."+encodeURIComponent(path), {method:"DELETE", headers:H});
+          if(!r.ok) throw new Error("Не удалось удалить ("+r.status+")");
+          refresh(); return true;
+        },
+        async acquire(){ return {acquired:true}; },
+        onSnapshot(cb, err){
+          const f = ()=> one(path).then(d=>cb({exists:!!d, data:()=>d||{}})).catch(e=>err&&err(e));
+          subs.push(f); f(); tickPoll(); return ()=>{};
+        }
+      };
+    },
+    collection(name){
+      const q={order:null, dir:"asc", lim:1000};
+      const api={
+        orderBy(f,d){ q.order=f; q.dir=d||"asc"; return api; },
+        limit(n){ q.lim=n; return api; },
+        onSnapshot(cb, err){
+          const f = ()=> rowsFor(name+"/").then(rows=>{
+            let docs = rows.map(r=>({id:r.path.slice(name.length+1), data:()=>r.data}));
+            if(q.order) docs.sort((a,b)=>{ const x=a.data()[q.order], y=b.data()[q.order];
+              return (x>y?1:x<y?-1:0)*(q.dir==="desc"?-1:1); });
+            cb({docs:docs.slice(0,q.lim)});
+          }).catch(e=>err&&err(e));
+          subs.push(f); f(); tickPoll(); return ()=>{};
+        }
+      };
+      return api;
+    }
+  };
+}
+
+function makeLocalDB(){
+  const KEY="mb_local_db";
+  const read=()=>{ try{ return JSON.parse(localStorage.getItem(KEY)||"{}"); }catch(e){ return {}; } };
+  const write=o=>{ try{ localStorage.setItem(KEY, JSON.stringify(o)); }catch(e){} };
+  const subs=[];
+  const notify=()=>subs.slice().forEach(f=>{ try{ f(); }catch(e){} });
+  const snapDoc=path=>{ const d=read()[path]; return {exists:!!d, data:()=>d||{}}; };
+  return {
+    doc(path){
+      return {
+        async get(){ return snapDoc(path); },
+        async set(v){ const o=read(); o[path]=v; write(o); notify(); return true; },
+        async update(v){ const o=read(); o[path]=Object.assign({}, o[path]||{}, v); write(o); notify(); return true; },
+        async delete(){ const o=read(); delete o[path]; write(o); notify(); return true; },
+        async acquire(){ return {acquired:true}; },
+        onSnapshot(cb){ const f=()=>cb(snapDoc(path)); subs.push(f); f(); return ()=>{}; }
+      };
+    },
+    collection(name){
+      const q={order:null, dir:"asc", lim:1000};
+      const build=()=>{
+        const o=read(), pref=name+"/";
+        let docs=Object.keys(o).filter(k=>k.indexOf(pref)===0).map(k=>({id:k.slice(pref.length), data:()=>o[k]}));
+        if(q.order) docs.sort((a,b)=>{ const x=a.data()[q.order], y=b.data()[q.order];
+          return (x>y?1:x<y?-1:0)*(q.dir==="desc"?-1:1); });
+        return {docs:docs.slice(0,q.lim)};
+      };
+      const api={
+        orderBy(f,d){ q.order=f; q.dir=d||"asc"; return api; },
+        limit(n){ q.lim=n; return api; },
+        onSnapshot(cb){ const f=()=>cb(build()); subs.push(f); f(); return ()=>{}; }
+      };
+      return api;
+    }
+  };
+}
+
+/* ---------- данные ---------- */
+async function boot(){
+  try{ S.db = (window.claude && window.claude.use) ? await window.claude.use("db") : null; }catch(e){ S.db=null; }
+  if(!S.db) S.db = (SUPA_URL && SUPA_KEY) ? makeSupaDB() : makeLocalDB();
+  try{ S.dl = (window.claude && window.claude.use) ? await window.claude.use("downloads") : null; }catch(e){ S.dl=null; }
+
+  S.db.collection("staff").onSnapshot(snap=>{
+    const next = snap.docs.map(d=>Object.assign({id:d.id}, d.data()));
+    const sig = JSON.stringify(next);
+    if(sig===S.sig.staff && S.loaded.staff) return;
+    S.sig.staff = sig;
+    S.staff = next;
+    S.loaded.staff = true;
+    if(!S.seeded && !S.staff.some(x=>x.id==="u-director")){ S.seeded=true; seedDirector(); }
+    if(S.me){ const m=S.staff.find(s=>s.id===S.me.id); if(m && m.active!==false) S.me=m; else { S.me=null; ss("mb_uid",null); } }
+    if(!S.me){ const uid=ss("mb_uid"); const m=uid&&S.staff.find(s=>s.id===uid); if(m&&m.active!==false) S.me=m; }
+    tick();
+  }, e=>dbFail(e));
+
+  S.db.collection("certs").orderBy("num","desc").limit(1000).onSnapshot(snap=>{
+    const next = snap.docs.map(d=>Object.assign({id:d.id}, d.data()));
+    const sig = JSON.stringify(next);
+    if(sig===S.sig.certs && S.loaded.certs) return;
+    S.sig.certs = sig;
+    S.certs = next;
+    S.loaded.certs = true; tick();
+  }, e=>dbFail(e));
+
+  S.db.doc("meta/settings").onSnapshot(snap=>{
+    const next = snap.exists ? snap.data() : null;
+    const sig = JSON.stringify(next);
+    if(sig===S.sig.settings) return;
+    S.sig.settings = sig; S.settings = next; tick(); });
+  S.db.collection("log").orderBy("at","desc").limit(300).onSnapshot(snap=>{
+    const next = snap.docs.map(d=>Object.assign({id:d.id}, d.data()));
+    const sig = JSON.stringify(next);
+    if(sig===S.sig.log) return;
+    S.sig.log = sig; S.log = next; render();
+  }, ()=>{});
+}
+let failShown=false;
+function dbFail(e){
+  const msg = (e && (e.message || e.code)) || "нет ответа";
+  if(failShown) return; failShown=true;
+  S.boot="fail"; S.bootMsg=String(msg); render();
+}
+async function seedDirector(){
+  try{
+    const id = "u-director";
+    await S.db.doc("staff/"+id).set({ name:"Жакеева Дара", login:"dara", branch:"first", role:"owner",
+      passHash: await hashPass("112233", id), active:true, mustChange:true, createdAt:new Date().toISOString() });
+    if(!S.settings) await S.db.doc("meta/settings").set(Object.assign({}, DEFAULTS));
+  }catch(e){}
+}
+async function writeLog(action, detail){
+  try{
+    const id = "l"+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+    await S.db.doc("log/"+id).set({ at:new Date().toISOString(), action, detail:detail||"",
+      byId:S.me?S.me.id:"", byName:S.me?S.me.name:"—", branch:S.me?S.me.branch:"" });
+  }catch(e){}
+}
+function tick(){ if(S.boot==="loading" && S.loaded.staff && S.loaded.certs) S.boot="ok"; render(); }
+
+async function saveSettings(patch){
+  await S.db.doc("meta/settings").set(Object.assign({}, DEFAULTS, S.settings||{}, patch));
+}
+async function reserveNumbers(count){
+  const ref = S.db.doc("meta/counter");
+  let got = await ref.acquire({holder:lease(), ttlMs:8000});
+  if(!got.acquired){ await sleep(1400); got = await ref.acquire({holder:lease(), ttlMs:8000}); }
+  if(!got.acquired) throw new Error("Сейчас кто-то другой выписывает сертификат. Подождите пару секунд.");
+  const snap = await ref.get();
+  const stored = snap.exists ? Number(snap.data().last)||0 : 0;
+  const seen = S.certs.reduce((m,c)=>Math.max(m, Number(c.num)||0), 0);
+  const from = Math.max(stored, seen) + 1;
+  if(snap.exists) await ref.update({last: from+count-1}); else await ref.set({last: from+count-1});
+  const out=[]; for(let i=0;i<count;i++) out.push(from+i);
+  return out;
+}
+function fmtNumber(n){ return "MB-" + String(n).padStart(4,"0"); }
+function nextNum(){ return S.certs.reduce((m,c)=>Math.max(m,Number(c.num)||0),0)+1; }
+
+/* ---------- выборки ---------- */
+function periodStart(){
+  const now=new Date();
+  if(S.period==="custom") return S.from ? new Date(S.from+"T00:00:00") : new Date(0);
+  if(S.period==="today") return new Date(now.getFullYear(),now.getMonth(),now.getDate());
+  if(S.period==="week") return new Date(Date.now()-7*864e5);
+  if(S.period==="month") return new Date(Date.now()-30*864e5);
+  return new Date(0);
+}
+function periodEnd(){
+  if(S.period==="custom" && S.to) return new Date(S.to+"T23:59:59");
+  return new Date(8640000000000000);
+}
+function events(scope){
+  const out=[];
+  for(const c of S.certs){
+    if(c.soldAt && c.status!=="stock") out.push({t:"sale",at:c.soldAt,cert:c,amount:Number(c.nominal)||0,branch:c.soldBranch,who:c.soldByName});
+    for(const r of (c.redemptions||[])) out.push({t:"red",at:r.at,cert:c,amount:Number(r.amount)||0,branch:r.branch,who:r.byName,note:r.note});
+  }
+  return out.filter(e=>!scope || e.branch===scope).sort((a,b)=> new Date(b.at) - new Date(a.at));
+}
+function stats(scope){
+  const from = periodStart(), to = periodEnd(), ev = events(scope);
+  let sold=0, soldN=0, red=0, redN=0;
+  const byBranch={}, byStaff={}, byStaffRed={};
+  for(const b of allBranches()) byBranch[b.id]={sold:0,soldN:0,red:0,redN:0,liab:0,liabN:0};
+  for(const e of ev){
+    const at = new Date(e.at);
+    if(at < from || at > to) continue;
+    if(e.t==="sale"){ sold+=e.amount; soldN++; if(byBranch[e.branch]){ byBranch[e.branch].sold+=e.amount; byBranch[e.branch].soldN++; } byStaff[e.who||"—"]=(byStaff[e.who||"—"]||0)+e.amount; }
+    if(e.t==="red"){ red+=e.amount; redN++; if(byBranch[e.branch]){ byBranch[e.branch].red+=e.amount; byBranch[e.branch].redN++; } byStaffRed[e.who||"—"]=(byStaffRed[e.who||"—"]||0)+e.amount; }
+  }
+  let liab=0, liabN=0, exp=0, expN=0, part=0, partN=0, usedN=0, allSold=0, allUsed=0;
+  for(const c of S.certs){
+    const st=statusOf(c), bal=Number(c.balance)||0, nom=Number(c.nominal)||0;
+    if(st==="stock"||st==="void") continue;
+    if(scope && c.soldBranch!==scope) continue;
+    allSold+=nom; allUsed+=(c.redemptions||[]).reduce((s,r)=>s+(Number(r.amount)||0),0);
+    if(st==="active"||st==="partial"){ liab+=bal; liabN++; if(byBranch[c.soldBranch]){ byBranch[c.soldBranch].liab+=bal; byBranch[c.soldBranch].liabN++; } }
+    if(st==="partial"){ part+=bal; partN++; }
+    if(st==="expired"){ exp+=bal; expN++; }
+    if(st==="used") usedN++;
+  }
+  return {sold,soldN,red,redN,byBranch,byStaff,byStaffRed,liab,liabN,exp,expN,part,partN,usedN,allSold,allUsed,ev};
+}
+function visibleCerts(){
+  const q = S.q.trim().toLowerCase();
+  return S.certs.filter(c=>{
+    const st = statusOf(c);
+    if(S.fStatus==="all" ? st==="stock" : S.fStatus!==st) return false;
+    if(S.fBranch!=="all" && c.soldBranch!==S.fBranch) return false;
+    if(!q) return true;
+    return [c.number,c.toName,c.toPhone,c.fromName,c.fromPhone,c.soldByName,c.note].some(v=>String(v||"").toLowerCase().includes(q));
+  });
+}
+function findByNumber(str){
+  const raw = String(str||"").trim().toLowerCase().replace(/\s/g,"");
+  if(!raw) return null;
+  const exact = S.certs.find(c=>String(c.number).toLowerCase()===raw);
+  if(exact) return exact;
+  const d = raw.replace(/\D/g,"");
+  if(!d) return null;
+  const n = Number(d);
+  return S.certs.find(c=>Number(String(c.number).replace(/\D/g,""))===n) || null;
+}
+
+/* ---------- операции ---------- */
+function flash(msg, bad){
+  $("#toast").innerHTML = '<div class="toast'+(bad?" bad":"")+'">'+esc(msg)+'</div>';
+  clearTimeout(flash._t); flash._t = setTimeout(()=>{ $("#toast").innerHTML=""; }, bad?4800:2600);
+}
+function openModal(m){ S.modal=m; renderModal(true); }
+function closeModal(){ S.modal=null; renderModal(true); render(); }
+
+function blanks(){ return S.certs.filter(c=>c.status==="stock"); }
+async function doSell(v){
+  const now = new Date().toISOString();
+  const patch = { nominal:v.nominal, balance:v.nominal, status:"active",
+    fromName:v.fromName, fromPhone:v.fromPhone, toName:v.toName, toPhone:v.toPhone,
+    soldBranch:v.branch, soldById:S.me.id, soldByName:S.me.name, soldAt:now,
+    expiresAt:v.expiresAt, note:v.note, redemptions:[] };
+  let number;
+  if(v.blankId){
+    const ref = S.db.doc("certs/"+v.blankId);
+    const got = await ref.acquire({holder:lease(), ttlMs:9000});
+    if(!got.acquired) throw new Error("Этот бланк сейчас оформляет другой администратор.");
+    const snap = await ref.get();
+    if(!snap.exists) throw new Error("Бланк не найден.");
+    if(snap.data().status!=="stock") throw new Error("Этот бланк уже продан.");
+    number = snap.data().number;
+    await ref.update(patch);
+  }else{
+    const [num] = await reserveNumbers(1);
+    number = fmtNumber(num);
+    await S.db.doc("certs/"+safeId(number)).set(Object.assign({number, num, createdAt:now}, patch));
+  }
+  await writeLog("Продажа", number+" · "+money(v.nominal)+" · "+branchName(v.branch)+(v.toName?" · "+v.toName:""));
+  return number;
+}
+async function doRedeem(cert, amount, branch, note){
+  const entry = { at:new Date().toISOString(), amount, branch, byId:S.me.id, byName:S.me.name, note:note||"" };
+  if(S.db.redeemRpc){
+    const d = await S.db.redeemRpc("certs/"+cert.id, amount, entry);
+    const nb = Number(d.balance)||0;
+    await writeLog("Погашение", cert.number+" · −"+money(amount)+" · "+branchName(branch)+" · остаток "+money(nb));
+    return nb;
+  }
+  const ref = S.db.doc("certs/"+cert.id);
+  let got = await ref.acquire({holder:lease(), ttlMs:9000});
+  if(!got.acquired){ await sleep(1200); got = await ref.acquire({holder:lease(), ttlMs:9000}); }
+  if(!got.acquired) throw new Error("Этот сертификат сейчас проводит другой администратор. Повторите через несколько секунд.");
+  const snap = await ref.get();
+  if(!snap.exists) throw new Error("Сертификат не найден.");
+  const d = snap.data();
+  if(d.status==="void") throw new Error("Сертификат аннулирован.");
+  const bal = Number(d.balance)||0;
+  if(amount > bal) throw new Error("Сумма больше остатка. Остаток: "+money(bal));
+  const list = (d.redemptions||[]).concat([{ at:new Date().toISOString(), amount, branch, byId:S.me.id, byName:S.me.name, note:note||"" }]);
+  const nb = Math.round((bal-amount)*100)/100;
+  await ref.update({ balance:nb, redemptions:list, status: nb<=0 ? "used" : "active" });
+  await writeLog("Погашение", d.number+" · −"+money(amount)+" · "+branchName(branch)+" · остаток "+money(nb));
+  return nb;
+}
+async function exportCsv(){
+  const head = ["Номер","Услуги","Статус","Номинал","Использовано","Остаток","Покупатель","Телефон покупателя","Получатель","Телефон получателя",
+    "Филиал продажи","Продал","Дата продажи","Действует до","Комментарий","Погашения"];
+  const rows = S.certs.slice().sort((a,b)=>(a.num||0)-(b.num||0)).map(c=>{
+    const used = (c.redemptions||[]).reduce((s,r)=>s+(Number(r.amount)||0),0);
+    const hist = (c.redemptions||[]).map(r=>dt(r.at)+" "+Math.round(Number(r.amount)||0)+"₸ "+branchName(r.branch)+(r.note?" ("+r.note+")":"")).join(" | ");
+    return [c.number, (c.redemptions||[]).map(r=>r.note).filter(Boolean).join(", ")||c.service||"", ST[statusOf(c)], c.nominal||0, used, c.balance||0, c.fromName||"", c.fromPhone||"", c.toName||"", c.toPhone||"",
+      branchName(c.soldBranch), c.soldByName||"", c.soldAt?new Date(c.soldAt).toLocaleDateString("ru-RU"):"",
+      c.expiresAt?new Date(c.expiresAt).toLocaleDateString("ru-RU"):"", c.note||"", hist];
+  });
+  const csv = "\uFEFF" + [head].concat(rows).map(r=>r.map(v=>{
+    const s=String(v==null?"":v); return /[";\n]/.test(s) ? '"'+s.replace(/"/g,'""')+'"' : s;
+  }).join(";")).join("\r\n");
+  const name = "moms-beauty-"+isoDate(new Date())+".csv";
+  if(S.dl){
+    try{ await S.dl.save({filename:name, data:csv}); }
+    catch(e){ if(e && e.code!=="declined") flash("Не удалось сохранить файл", true); }
+    return;
+  }
+  try{
+    const url = URL.createObjectURL(new Blob([csv], {type:"text/csv;charset=utf-8"}));
+    const a = document.createElement("a"); a.href=url; a.download=name;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(()=>URL.revokeObjectURL(url), 2000);
+  }catch(e){ flash("Не удалось сохранить файл", true); }
+}
+
+/* ---------- вход и регистрация ---------- */
+function gbrand(){ return '<div class="gbrand"><b>Mom&#39;s Beauty</b><span>Подарочные сертификаты</span></div>'; }
+function renderGate(){
+  const g = S.gate;
+  if(S.boot==="fail") return '<div class="gate"><div class="gatecard">'+gbrand()+
+    '<div class="card pad"><div class="lbl" style="margin-bottom:8px">База не отвечает</div>'+
+    '<p class="tiny" style="margin:0 0 12px">'+esc(S.bootMsg)+'</p>'+
+    '<p class="tiny" style="margin:0">Если открыли файл двойным щелчком с компьютера — так браузер блокирует связь с базой. Выложите файл на GitHub Pages и откройте по адресу сайта. Если адрес уже работает, проверьте, что в Supabase выполнен запрос создания таблицы mb_docs.</p></div></div></div>';
+  if(S.boot==="nodb") return '<div class="gate"><div class="gatecard">'+gbrand()+'<div class="card pad"><p class="muted" style="margin:0">'+esc(S.bootMsg)+'</p></div></div></div>';
+  if(S.boot==="loading") return '<div class="gate"><div class="tiny">Загрузка…</div></div>';
+  const first = S.staff.length===0;
+  const tab = first ? "signup" : g.tab;
+  const branchOpts = BRANCHES.map(b=>'<option value="'+b.id+'">'+esc(b.name)+'</option>').join("");
+  return '<div class="gate"><div class="gatecard">'+gbrand()+`
+    <div class="card pad">
+      ${first?'<p class="tiny" style="margin:0 0 18px">Первый вход. Создайте себе доступ — вы станете владельцем и сможете добавлять администраторов.</p>':`
+      <div class="gtabs">
+        <button class="gtab" data-act="gtab" data-t="login" aria-current="${tab==="login"}">Вход</button>
+        <button class="gtab" data-act="gtab" data-t="signup" aria-current="${tab==="signup"}">Регистрация</button>
+      </div>`}
+      ${g.err?'<div class="err">'+esc(g.err)+'</div>':''}
+      ${tab==="login"?`
+        <label class="f"><span>Логин</span><input class="in" id="l-login" autocapitalize="none" autocomplete="username"></label>
+        <label class="f"><span>Пароль — 6 цифр</span><input class="in" id="l-pass" type="password" inputmode="numeric" maxlength="6" autocomplete="current-password"></label>
+        <button class="btn primary" data-act="dologin" style="width:100%;margin-top:6px">Войти</button>
+      `:`
+        <label class="f"><span>Имя и фамилия</span><input class="in" id="su-name" placeholder="Айгерим Нурланова"></label>
+        <label class="f"><span>Филиал</span><select class="in" id="su-branch">${branchOpts}</select></label>
+        <label class="f"><span>Логин — без пробелов</span><input class="in" id="su-login" autocapitalize="none" placeholder="zhamila или почта"></label>
+        <label class="f"><span>Пароль — ровно 6 цифр</span><input class="in" id="su-pass" type="password" inputmode="numeric" maxlength="6" autocomplete="new-password"></label>
+        <label class="f"><span>Повторите пароль</span><input class="in" id="su-pass2" type="password" inputmode="numeric" maxlength="6" autocomplete="new-password"></label>
+        ${first?"":'<label class="f"><span>Код доступа — спросите у директора</span><input class="in" id="su-code" autocapitalize="characters"></label>'}
+        <button class="btn primary" data-act="dosignup" style="width:100%;margin-top:6px">Создать доступ</button>
+      `}
+    </div></div></div>`;
+}
+
+/* ---------- приложение ---------- */
+function render(){
+  if(S.modal) return;
+  const focus = document.activeElement;
+  const fk = focus && focus.dataset ? focus.dataset.k : null;
+  const fpos = focus && focus.selectionStart;
+  if(!S.me || S.boot!=="ok"){ $("#root").innerHTML = renderGate(); return; }
+
+  const inMore = S.view==="more"||S.view==="team"||S.view==="settings"||S.view==="log";
+  const isDir2 = S.me.role==="owner";
+  const menu = [
+    {act:"nav", v:"home",   label:isDir2?"Отчёт и сертификаты":"Сертификаты", icon:"🎁", on:S.view==="home"},
+    {act:"sell", v:"",      label:"Продать",   icon:"＋", on:false},
+    {act:"redeem", v:"",    label:"Погасить",  icon:"✓",  on:false},
+    {act:"nav", v:"more",   label:"Ещё",       icon:"⚙",  on:inMore}
+  ];
+
+  $("#root").innerHTML = `
+  <div class="shell">
+    <aside class="rail">
+      <div class="brand"><b>Mom&#39;s Beauty</b><span>Сертификаты</span></div>
+      ${menu.map(n=>`<button class="navlink" data-act="${n.act}"${n.v?` data-v="${n.v}"`:""} aria-current="${n.on}"><i>${n.icon}</i>${n.label}</button>`).join("")}
+      <div class="railfoot"><b style="font-weight:500">${esc(S.me.name)}</b><div class="tiny">${nt(branchName(S.me.branch))}</div>
+        <div class="row" style="gap:16px"><button class="btn ghost" data-act="theme">Тема</button><button class="btn ghost" data-act="logout">Выйти</button></div></div>
+    </aside>
+    <main class="main">
+      <div class="topbar">
+        <div><b class="disp" style="font-size:22px">Mom&#39;s Beauty</b>
+          <div class="tiny">${esc(S.me.name)} · ${nt(branchName(S.me.branch))}</div></div>
+        <div class="row" style="gap:14px"><button class="btn ghost" data-act="theme">Тема</button><button class="btn ghost" data-act="logout">Выйти</button></div>
+      </div>
+      ${ S.view==="home" ? ((S.me.role==="owner"?viewReport():"")+viewCerts()) : S.view==="team" ? viewTeam() : S.view==="more" ? viewMore() : S.view==="log" ? viewLog() : viewSettings() }
+    </main>
+  </div>
+  <nav class="tabbar" style="grid-template-columns:repeat(4,1fr)">
+    <button class="tab" data-act="nav" data-v="home" aria-current="${S.view==="home"}">Главная</button>
+    <button class="tab accent" data-act="sell">Продать</button>
+    <button class="tab" data-act="redeem">Погасить</button>
+    <button class="tab" data-act="nav" data-v="more" aria-current="${inMore}">Ещё</button>
+  </nav>`;
+  if(fk){ const el=document.querySelector('[data-k="'+fk+'"]'); if(el){ el.focus(); try{ el.setSelectionRange(fpos,fpos); }catch(e){} } }
+}
+
+function viewReport(){
+  const isDir = S.me.role==="owner";
+  const s = stats(isDir ? null : S.me.branch);
+  const per = [["today","Сегодня"],["week","7 дней"],["month","30 дней"],["all","Всё время"],["custom","Свой период"]];
+  const bl = allBranches();
+  const maxB = Math.max(1, ...bl.map(b=>s.byBranch[b.id].sold));
+  const top = Object.entries(s.byStaff).sort((a,b)=>b[1]-a[1]).slice(0,6);
+  const topRed = Object.entries(s.byStaffRed).sort((a,b)=>b[1]-a[1]).slice(0,6);
+  return `
+  <div class="hero">
+    <div class="lbl">${isDir?"Не погашено — деньги, за которые ещё не оказаны услуги":"Не погашено по вашему филиалу — "+esc(branchName(S.me.branch))}</div>
+    <div class="big disp">${money(s.liab)}</div>
+    <div class="tiny">${s.liabN} действующих сертификатов${s.expN?" · просрочено "+s.expN+" на "+money(s.exp):""}</div>
+  </div>
+  <div class="wrap" style="margin-top:20px">${per.map(p=>`<button class="chip" data-act="per" data-p="${p[0]}" aria-pressed="${S.period===p[0]}">${p[1]}</button>`).join("")}</div>
+  ${S.period==="custom"?`<div class="card pad" style="margin-top:12px">
+    <div class="grid2">
+      <label class="f"><span>С какой даты</span><input class="in" id="p-from" type="date" value="${esc(S.from||"")}"></label>
+      <label class="f"><span>По какую</span><input class="in" id="p-to" type="date" value="${esc(S.to||"")}"></label>
+    </div>
+    <div class="row" style="gap:10px"><button class="btn primary sm" data-act="applyper">Показать</button>
+      <span class="tiny">${S.from||S.to?"Показано: "+(S.from?dt(S.from):"с начала")+" — "+(S.to?dt(S.to):"по сегодня"):"Выберите даты"}</span></div>
+  </div>`:""}
+  <div class="kpis">
+    <div class="kpi"><div class="lbl">Продано за период</div><div class="v">${money(s.sold)}</div><div class="tiny">${s.soldN} шт.</div></div>
+    <div class="kpi"><div class="lbl">Погашено за период</div><div class="v">${money(s.red)}</div><div class="tiny">${s.redN} операций</div></div>
+    <div class="kpi"><div class="lbl">Средний номинал</div><div class="v">${money(s.soldN?s.sold/s.soldN:0)}</div><div class="tiny">за период</div></div>
+    ${isDir?`<div class="kpi"><div class="lbl">Всего продано</div><div class="v">${money(s.allSold)}</div><div class="tiny">за всё время</div></div>`:""}
+  </div>
+
+  ${isDir?`<div style="margin-top:22px"><button class="btn sm" data-act="det">${S.det?"Скрыть подробности":"Показать подробности"}</button></div>
+  ${S.det?`<div class="sec">Итог по всем сертификатам</div>
+  <div class="card pad">
+    <div class="kv"><span class="muted">Продано на сумму</span><span class="disp" style="font-size:18px">${money(s.allSold)}</span></div>
+    <div class="kv"><span class="muted">Использовано клиентами</span><span class="disp" style="font-size:18px">${money(s.allUsed)}</span></div>
+    <div class="kv"><span style="color:var(--ok)">Действуют полностью</span><span class="disp" style="font-size:18px">${money(s.liab-s.part)} · ${s.liabN-s.partN} шт.</span></div>
+    <div class="kv"><span style="color:var(--warn)">С остатком</span><span class="disp" style="font-size:18px">${money(s.part)} · ${s.partN} шт.</span></div>
+    <div class="kv"><span style="color:var(--dead)">Срок истёк</span><span class="disp" style="font-size:18px">${money(s.exp)} · ${s.expN} шт.</span></div>
+    <div class="kv"><span class="muted">Использованы полностью</span><span class="disp" style="font-size:18px">${s.usedN} шт.</span></div>
+  </div>
+
+  <div class="sec">Филиалы за период</div>
+  <div class="card pad">
+    ${bl.map(b=>{ const v=s.byBranch[b.id];
+      return `<div class="brow"><div class="top"><span>${nt(b.name)}</span><span class="vv">${money(v.sold)}</span></div>
+        <div class="bar" style="margin:8px 0 5px"><i style="width:${Math.round(v.sold/maxB*100)}%"></i></div>
+        <div class="tiny">${v.soldN} сертификатов · погашено ${money(v.red)} за ${v.redN} операций · не погашено ${money(v.liab)}</div></div>`; }).join("")}
+  </div>
+
+  ${top.length?`<div class="sec">Кто продал</div>
+  <div class="card pad">${top.map(([n,v])=>`<div class="spread" style="padding:8px 0"><span>${esc(n)}</span><span class="disp" style="font-size:18px">${money(v)}</span></div>`).join("")}</div>`:""}
+
+  ${topRed.length?`<div class="sec">Кто погасил</div>
+  <div class="card pad">${topRed.map(([n,v])=>`<div class="spread" style="padding:8px 0"><span>${esc(n)}</span><span class="disp" style="font-size:18px">${money(v)}</span></div>`).join("")}</div>`:""}`:""}`
+  :`<div class="sec">По вашему филиалу</div>
+  <div class="card pad">
+    <div class="kv"><span style="color:var(--ok)">Действуют полностью</span><span class="disp" style="font-size:18px">${money(s.liab-s.part)} · ${s.liabN-s.partN} шт.</span></div>
+    <div class="kv"><span style="color:var(--warn)">С остатком</span><span class="disp" style="font-size:18px">${money(s.part)} · ${s.partN} шт.</span></div>
+    <div class="kv"><span style="color:var(--dead)">Срок истёк</span><span class="disp" style="font-size:18px">${money(s.exp)} · ${s.expN} шт.</span></div>
+  </div>`}
+
+  ${isDir?'<div style="margin-top:20px"><button class="btn" data-act="csv">Выгрузить полный отчёт в CSV</button></div>':""}`;
+}
+
+function viewCerts(){
+  const list = visibleCerts();
+  const sold = S.certs.filter(c=>c.status!=="stock");
+  const sts = [["all","Все"],["active","Действуют"],["partial","С остатком"],["expired","Срок истёк"]];
+  return `
+  ${S.me.role==="owner"?'<div class="sec" style="margin-top:34px">Сертификаты</div>'
+    :`<div class="spread" style="margin-bottom:6px"><h1 class="disp" style="font-size:27px">Сертификаты</h1></div>
+      <p class="tiny" style="margin:0 0 16px">Найдите номер — увидите остаток, услугу и срок. Продать и списать можно кнопками ниже.</p>`}
+  <label class="f"><span>🔍 Поиск по уже проданным</span>
+    <input class="in" data-k="q" data-act="q" placeholder="Введите номер сертификата" value="${esc(S.q)}"></label>
+  <div class="wrap" style="margin-bottom:8px">${sts.map(x=>`<button class="chip" data-act="fst" data-s="${x[0]}" aria-pressed="${S.fStatus===x[0]}">${x[1]}</button>`).join("")}</div>
+  <div class="wrap" style="margin-bottom:18px">
+    <button class="chip" data-act="fbr" data-b="all" aria-pressed="${S.fBranch==="all"}">Все филиалы</button>
+    ${allBranches().map(b=>`<button class="chip" data-act="fbr" data-b="${b.id}" aria-pressed="${S.fBranch===b.id}">${nt(b.name)}</button>`).join("")}
+  </div>
+  ${list.length? '<div class="clist">'+list.map(certRow).join("")+'</div>'
+   : '<div class="card empty"><b>Ничего не найдено</b>Измените фильтры или продайте новый сертификат.</div>'}`;
+}
+function certRow(c){
+  const st = statusOf(c), nom=Number(c.nominal)||0, bal=Number(c.balance)||0;
+  return `<button class="crow s-${st}" data-act="open" data-id="${esc(c.id)}">
+    <span class="no">${esc(c.number)}</span>
+    <span><span class="nm">${esc(c.toName||"Без имени")}${c.fromName?' <span class="tiny">от '+esc(c.fromName)+'</span>':""}</span>
+      ${(function(){ const t=(c.redemptions||[]).map(r=>r.note).filter(Boolean).join(", ")||c.service||"";
+          return t?'<span class="tiny" style="display:block">'+esc(t)+'</span>':""; })()}
+      <span class="tiny" style="display:block">${nt(branchName(c.soldBranch))}${c.soldByName?" · "+esc(c.soldByName):""}${c.soldAt?" · "+dt(c.soldAt):""}${c.expiresAt?" · до "+dt(c.expiresAt):""}</span></span>
+    <span class="rt"><span class="st ${st}">${ST[st]}</span><span class="amt">${money(bal)}</span>
+      ${nom&&bal!==nom?'<span class="tiny">из '+money(nom)+'</span>':""}</span>
+    ${st==="partial"?`<span class="full"><span class="bar"><i style="width:${Math.max(0,Math.min(100,bal/nom*100))}%"></i></span></span>`:""}
+  </button>`;
+}
+
+function viewTeam(){
+  const isOwner = S.me.role==="owner";
+  return `
+  <div class="spread" style="margin-bottom:16px"><h1 class="disp" style="font-size:27px">Команда</h1></div>
+  ${isOwner?`<div class="card pad" style="margin-bottom:14px">
+    <div class="lbl" style="margin-bottom:12px">Мой филиал</div>
+    <label class="f">${branchSelect("my-branch", S.me.branch)}</label>
+    <button class="btn sm" data-act="mybranch">Сохранить</button>
+  </div>`:`<div class="card pad" style="margin-bottom:14px">
+    <div class="lbl" style="margin-bottom:6px">Вы — администратор</div>
+    <p class="tiny" style="margin:0">Ваш филиал — ${nt(branchName(S.me.branch))}. Изменить его может только директор. Вам доступны продажа, погашение, продление срока и список сертификатов.</p>
+  </div>`}
+  <div class="card pad">
+    ${S.staff.slice().sort((a,b)=>String(a.name).localeCompare(String(b.name),"ru")).map(s=>{
+      const sold = S.certs.filter(c=>c.soldById===s.id).reduce((t,c)=>t+(Number(c.nominal)||0),0);
+      return `<div class="spread" style="padding:13px 0;border-bottom:1px solid var(--line-2)">
+        <div><b style="font-weight:500">${esc(s.name)}</b>${s.active===false?' <span class="tiny">— доступ отключён</span>':""}
+          <div class="tiny">${nt(branchName(s.branch))} · ${s.role==="owner"?"директор":"администратор"} · логин ${esc(s.login||"—")} · продал ${money(sold)}</div></div>
+        ${isOwner && s.id!==S.me.id?`<span class="wrap" style="justify-content:flex-end">
+          <select class="in" style="width:auto;padding:4px 18px 4px 0;font-size:12.5px" data-act="setbranch" data-id="${esc(s.id)}">
+            ${BRANCHES.map(b=>`<option value="${b.id}"${b.id===s.branch?" selected":""}>${esc(b.name)}</option>`).join("")}</select>
+          <button class="btn sm" data-act="togglestaff" data-id="${esc(s.id)}">${s.active===false?"Вернуть доступ":"Закрыть вход"}</button>
+          <button class="btn sm" data-act="role" data-id="${esc(s.id)}">${s.role==="owner"?"Снять директора":"Сделать директором"}</button>
+          <button class="btn sm" data-act="resetpass" data-id="${esc(s.id)}">Сбросить пароль</button>
+          <button class="btn sm danger" data-act="delstaff" data-id="${esc(s.id)}">Уволить</button></span>`:""}
+      </div>`;}).join("")}
+  </div>
+  <p class="tiny" style="margin-top:14px">Директоров может быть несколько — кнопка «Сделать директором» напротив имени. Последнего директора снять нельзя, иначе управлять программой станет некому. На своей строке кнопок нет: сам себя уволить или разжаловать никто не может.<br><br>Новый администратор заводит доступ сам — на странице входа, вкладка «Регистрация»: имя, филиал, логин, шесть цифр пароля и код от директора. Числом не ограничено.<br><br>Уволилась — нажмите «Уволить»: вход закроется сразу, из списка исчезнет. Если человек в отпуске или под вопросом — «Закрыть вход», тогда останется в списке и доступ можно вернуть. В обоих случаях её продажи, погашения и записи журнала сохраняются. После увольнения смените код регистрации в Настройках.<br><br>Забыла пароль — «Сбросить пароль»: программа выдаст шесть цифр, продиктуйте их сотруднице. При входе она сразу поставит свой.</p>`;
+}
+
+function viewMore(){
+  return `
+  <h1 class="disp" style="font-size:27px;margin-bottom:16px">Ещё</h1>
+  ${S.me.role==="owner"?`<div class="card pad">
+    <button class="btn" data-act="findedit" style="width:100%;justify-content:space-between;border:0;border-bottom:1px solid var(--line-2);border-radius:0;padding:14px 0">Продлить срок сертификата<span class="tiny">выбрать из списка</span></button>
+    <button class="btn" data-act="nav" data-v="team" style="width:100%;justify-content:space-between;border:0;border-bottom:1px solid var(--line-2);border-radius:0;padding:14px 0">Команда<span class="tiny">${S.staff.length}</span></button>
+    <button class="btn" data-act="nav" data-v="log" style="width:100%;justify-content:space-between;border:0;border-bottom:1px solid var(--line-2);border-radius:0;padding:14px 0">Журнал действий<span class="tiny">${S.log.length}</span></button>
+    <button class="btn" data-act="nav" data-v="settings" style="width:100%;justify-content:space-between;border:0;border-radius:0;padding:14px 0">Настройки<span class="tiny">код, срок, выгрузка</span></button>
+  </div>`:""}
+  ${S.me.mustChange?`<div class="card pad" style="margin-top:14px;border-color:var(--gold)">
+    <div class="lbl" style="margin-bottom:6px;color:var(--gold)">Смените временный пароль</div>
+    <p class="tiny" style="margin:0 0 12px">Сейчас стоит пароль, который вам выдали. Поставьте свой — знать его будете только вы.</p>
+    <button class="btn primary sm" data-act="pass">Сменить пароль</button></div>`:""}
+  <div class="card pad" style="margin-top:14px">
+    <b style="font-weight:500">${esc(S.me.name)}</b>
+    <div class="tiny">${nt(branchName(S.me.branch))} · ${S.me.role==="owner"?"директор":"администратор"} · логин ${esc(S.me.login||"—")}</div>
+    <div class="wrap" style="margin-top:12px"><button class="btn sm" data-act="pass">Сменить пароль</button>
+      <button class="btn ghost" data-act="theme">Тема</button><button class="btn ghost danger" data-act="logout">Выйти</button></div>
+  </div>`;
+}
+
+function viewLog(){
+  const isDir = S.me.role==="owner";
+  const rows = isDir ? S.log : S.log.filter(l=>l.byId===S.me.id);
+  return `
+  <h1 class="disp" style="font-size:27px;margin-bottom:6px">${isDir?"Журнал действий":"Мои действия"}</h1>
+  <p class="tiny" style="margin:0 0 16px">${isDir?"Все действия всех сотрудников. Записывается автоматически, стереть или исправить записи нельзя."
+    :"Ваши действия. Записывается автоматически и видно директору — исправить или удалить записи нельзя."}</p>
+  ${rows.length? '<div class="card pad">'+rows.map(l=>`
+    <div class="fitem"><span>${esc(l.action)}
+      <span class="tiny" style="display:block">${esc(l.detail||"")}</span>
+      <span class="tiny" style="display:block">${esc(l.byName||"—")} · ${dtt(l.at)}</span></span><span></span></div>`).join("")+'</div>'
+   : '<div class="card empty"><b>Пока пусто</b>Здесь появятся продажи, погашения, продления срока и изменения доступов.</div>'}`;
+}
+
+function viewSettings(){
+  const bl = blanks();
+  return `
+  <h1 class="disp" style="font-size:27px;margin-bottom:16px">Настройки</h1>
+
+  <div class="card pad" style="margin-bottom:14px">
+    <div class="lbl" style="margin-bottom:12px">Код для регистрации</div>
+    <p class="tiny" style="margin:0 0 12px">Без него новый человек не заведёт себе доступ. Говорите его только своим администраторам и меняйте, когда кто-то увольняется.</p>
+    <label class="f"><span>Код</span><input class="in" data-k="s-code" id="s-code" value="${esc(cfg("signupCode"))}"></label>
+    <button class="btn primary" data-act="savecode">Сохранить код</button>
+  </div>
+
+  <div class="card pad" style="margin-bottom:14px">
+    <div class="lbl" style="margin-bottom:12px">Нумерация и срок</div>
+    <p class="tiny" style="margin:0 0 14px">Номера идут подряд: MB-0001, MB-0002, MB-0003. Изменить или пропустить номер нельзя — ни вам, ни администраторам.</p>
+    <div class="kv"><span class="muted">Следующий номер</span><span class="disp" style="font-size:20px">${esc(fmtNumber(nextNum()))}</span></div>
+    <label class="f" style="margin-top:16px"><span>Срок действия по умолчанию, месяцев</span><input class="in" data-k="s-val" id="s-val" inputmode="numeric" value="${esc(cfg("validityMonths"))}"></label>
+    <button class="btn primary" data-act="savenum">Сохранить срок</button>
+    <p class="tiny" style="margin:14px 0 0">Продлить срок уже проданному — по просьбе клиента — можно кнопкой ниже или открыв сертификат в списке.</p>
+    <button class="btn" data-act="findedit" style="margin-top:12px">Продлить срок сертификата</button>
+  </div>
+
+  <div class="card pad">
+    <div class="lbl" style="margin-bottom:10px">Данные</div>
+    <p class="tiny" style="margin:0 0 16px">В базе ${S.certs.length-bl.length} сертификатов и ${S.staff.length} сотрудников.</p>
+    <div class="wrap">
+      <button class="btn" data-act="nav" data-v="log">Журнал действий</button>
+      <button class="btn" data-act="csv">Выгрузить CSV</button>
+    </div>
+  </div>`;
+}
+
+/* ---------- окна ---------- */
+let modalKey = null;
+function renderModal(force){
+  const m = S.modal;
+  const key = m ? m.type+":"+(m.id||"") : null;
+  if(!force && key===modalKey) return;
+  modalKey = key;
+  const host = $("#modal");
+  if(!m){ host.innerHTML=""; return; }
+  const act = document.activeElement;
+  const fk = act && act.dataset ? act.dataset.k : null;
+  let fpos = null;
+  try{ fpos = act ? act.selectionStart : null; }catch(e){ fpos = null; }
+  const inner = m.type==="sell" ? mSell(m) : m.type==="redeem" ? mRedeem(m) : m.type==="edit" ? mEdit(m) : m.type==="find" ? mFind(m) : m.type==="pass" ? mPass(m) : m.type==="reset" ? mReset(m) : mCert(m);
+  host.innerHTML = '<div class="scrim" data-act="scrim"><div class="sheet">'+inner+'</div></div>';
+  if(fk){
+    const el = host.querySelector('[data-k="'+fk+'"]');
+    if(el){ el.focus(); try{ el.setSelectionRange(fpos==null?el.value.length:fpos, fpos==null?el.value.length:fpos); }catch(e){} return; }
+  }
+  const first = host.querySelector("input:not([readonly]), select");
+  if(first && window.matchMedia("(min-width:720px)").matches) first.focus();
+}
+function head(t, sub){
+  return `<div class="sheethead"><div><h2>${t}</h2>${sub?'<div class="tiny">'+sub+'</div>':""}</div><button class="x" data-act="close">✕</button></div>`;
+}
+function branchSelect(id, sel){
+  return `<select class="in" id="${id}">${BRANCHES.map(b=>`<option value="${b.id}"${b.id===sel?" selected":""}>${esc(b.name)}</option>`).join("")}</select>`;
+}
+function mSell(m){
+  const exp = isoDate(addMonths(new Date(), Number(cfg("validityMonths"))||12));
+  return head("Продажа сертификата", "Продавец "+esc(S.me.name))+`
+  ${m.err?'<div class="err">'+esc(m.err)+'</div>':""}
+  <div class="kv" style="margin-bottom:14px"><span class="muted">Номер присвоится сам</span><span class="disp" style="font-size:20px">${esc(fmtNumber(nextNum()))}</span></div>
+  <label class="f"><span>Номинал, ₸</span><input class="in" id="f-nominal" inputmode="numeric" placeholder="20000"></label>
+  <div class="wrap" style="margin:-8px 0 18px">${cfg("nominals").map(n=>`<button class="chip" data-act="nom" data-v="${n}">${money(n)}</button>`).join("")}</div>
+  <label class="f"><span>Покупатель — кто оплатил</span><input class="in" id="f-from" placeholder="Имя покупателя"></label>
+  <label class="f"><span>Получатель — кому подарок</span><input class="in" id="f-to" placeholder="Имя получателя"></label>
+  <label class="f"><span>Филиал продажи</span>${branchSelect("f-branch", S.me.branch)}</label>
+  <div style="margin:-4px 0 16px"><button class="btn ghost" data-act="more2">${m.more?"Свернуть":"Телефоны, срок, комментарий"}</button></div>
+  <div style="${m.more?"":"display:none"}">
+    <div class="grid2">
+      <label class="f"><span>Телефон дарителя</span><input class="in" id="f-fromph" inputmode="tel" placeholder="+7"></label>
+      <label class="f"><span>Телефон получателя</span><input class="in" id="f-toph" inputmode="tel" placeholder="+7"></label>
+    </div>
+    <label class="f"><span>Действует до</span><input class="in" id="f-exp" type="date" value="${exp}"></label>
+    <label class="f"><span>Комментарий</span><input class="in" id="f-note" placeholder="Например, на день рождения"></label>
+  </div>
+  <button class="btn primary" data-act="dosell" style="width:100%;margin-top:8px">Оформить продажу</button>`;
+}
+function mRedeem(m){
+  const c = m.id ? S.certs.find(x=>x.id===m.id) : (m.q ? findByNumber(m.q) : null);
+  const st = c ? statusOf(c) : null;
+  return head("Погашение","Проводит "+esc(S.me.name))+`
+  ${m.err?'<div class="err">'+esc(m.err)+'</div>':""}
+  <label class="f"><span>Номер или имя — или просто выберите ниже</span><input class="in" data-k="r-q" id="r-q" data-act="rq" value="${esc(m.q||(c?c.number:""))}" placeholder="1, MB-0001 или имя"></label>
+  ${!c ? (function(){
+      const q = String(m.q||"").trim().toLowerCase();
+      const pick = S.certs.filter(x=>{
+        const st2 = statusOf(x);
+        if(st2==="used"||st2==="void"||st2==="stock") return false;
+        if(!q) return true;
+        return [x.number,x.toName,x.fromName,x.toPhone,x.fromPhone].some(v=>String(v||"").toLowerCase().includes(q));
+      }).slice(0,8);
+      if(!pick.length) return '<p class="tiny">Ничего не нашлось. Наберите цифры номера — например 1 вместо MB-0001.</p>';
+      return '<div class="lbl" style="margin:4px 0 2px">Выберите сертификат</div><div class="clist" style="border-top:0">'
+        + pick.map(x=>{ const s2=statusOf(x);
+            return `<button class="crow s-${s2}" data-act="rpick" data-id="${esc(x.id)}">
+              <span class="no">${esc(x.number)}</span>
+              <span><span class="nm">${esc(x.toName||"Без имени")}</span>
+                <span class="tiny" style="display:block">${nt(branchName(x.soldBranch))}${x.expiresAt?" · до "+dt(x.expiresAt):""}</span></span>
+              <span class="rt"><span class="st ${s2}">${ST[s2]}</span><span class="amt">${money(x.balance)}</span></span>
+            </button>`; }).join("")
+        + '</div>';
+    })() : `
+    <div style="border-top:1px solid var(--line);padding-top:16px;margin-bottom:18px">
+      <div class="spread"><span class="disp" style="font-size:22px">${esc(c.number)}</span><span class="st ${st}">${ST[st]}</span></div>
+      <div class="tiny">${esc(c.toName||"Без имени")}${c.fromName?" · от "+esc(c.fromName):""}</div>
+      <div class="spread" style="margin-top:12px"><span class="lbl">Остаток</span><span class="disp" style="font-size:26px">${money(c.balance)}</span></div>
+      <div class="bar" style="margin-top:8px"><i style="width:${Math.max(0,Math.min(100,(Number(c.balance)||0)/(Number(c.nominal)||1)*100))}%"></i></div>
+      ${c.expiresAt?'<div class="tiny" style="margin-top:8px">Действует до '+dt(c.expiresAt)+(st==="expired"?" — срок истёк":"")+'</div>':""}
+    </div>
+    <label class="f"><span>Сумма списания, ₸</span><input class="in" id="r-amt" inputmode="numeric" placeholder="${Math.round(Number(c.balance)||0)}"></label>
+    <div class="wrap" style="margin:-8px 0 18px">
+      <button class="chip" data-act="ramt" data-v="${Number(c.balance)||0}">Весь остаток</button>
+      <button class="chip" data-act="ramt" data-v="${Math.round((Number(c.balance)||0)/2)}">Половина</button>
+    </div>
+    <div class="grid2">
+      <label class="f"><span>Филиал</span>${branchSelect("r-branch", S.me.branch)}</label>
+      <label class="f"><span>Какая услуга</span><input class="in" id="r-note" placeholder="Например, окрашивание"></label>
+    </div>
+    <button class="btn primary" data-act="doredeem" data-id="${esc(c.id)}" style="width:100%;margin-top:8px">Списать с сертификата</button>`}`;
+}
+function mCert(m){
+  const c = S.certs.find(x=>x.id===m.id);
+  if(!c) return head("Сертификат")+'<div class="empty">Не найден</div>';
+  const st = statusOf(c), nom=Number(c.nominal)||0, bal=Number(c.balance)||0;
+  const used = (c.redemptions||[]).reduce((s,r)=>s+(Number(r.amount)||0),0);
+  const used2 = (c.redemptions||[]).map(r=>r.note).filter(Boolean).join(", ");
+  const kv = [["Услуги по сертификату", used2 || (c.service||"—")],
+    ["Покупатель",(c.fromName||"—")+(c.fromPhone?" · "+c.fromPhone:"")],
+    ["Получатель",(c.toName||"—")+(c.toPhone?" · "+c.toPhone:"")],
+    ["Продал",c.soldByName||"—"],["Филиал продажи",branchName(c.soldBranch)],
+    ["Дата продажи",c.soldAt?dt(c.soldAt):"—"],["Действует до",c.expiresAt?dt(c.expiresAt):"без срока"]];
+  return head("Подарочный сертификат", '№ '+esc(c.number)+' · <span class="st '+st+'">'+ST[st]+'</span>')+`
+  ${m.err?'<div class="err">'+esc(m.err)+'</div>':""}
+  <div class="gift">
+    <div class="cap">GIFT CERTIFICATE</div>
+    <div class="num">${esc(String(c.number).replace(/^\D+/,""))}</div>
+    ${used2?'<div style="margin-top:8px;opacity:.9">'+esc(used2)+'</div>':""}
+    <div class="cells">
+      <div><span class="lbl">Стоимость</span><b>${money(nom)}</b></div>
+      <div><span class="lbl">Остаток</span><b>${money(bal)}</b></div>
+      <div><span class="lbl">Срок действия</span><b>${c.expiresAt?dt(c.expiresAt):"без срока"}</b></div>
+      <div><span class="lbl">Продан</span><b>${c.soldAt?dt(c.soldAt):"—"}</b></div>
+    </div>
+  </div>
+  <div class="bar"><i style="width:${nom?Math.max(0,Math.min(100,bal/nom*100)):0}%"></i></div>
+  <div class="tiny" style="margin-top:6px">использовано ${money(used)} из ${money(nom)}</div>
+  <div class="card pad" style="margin:18px 0">
+    ${kv.map(r=>`<div class="kv"><span class="tiny">${esc(r[0])}</span><span>${esc(r[1])}</span></div>`).join("")}
+    ${c.note?'<p class="tiny" style="margin:10px 0 0">'+esc(c.note)+'</p>':""}
+  </div>
+  <div class="lbl" style="margin-bottom:6px">История</div>
+  <div class="card pad">
+    ${c.soldAt?`<div class="fitem"><span>Продан<span class="tiny" style="display:block">${esc(c.soldByName||"—")} · ${nt(branchName(c.soldBranch))} · ${dtt(c.soldAt)}</span></span><span class="amt">${money(nom)}</span></div>`:""}
+    ${(c.redemptions||[]).map(r=>`<div class="fitem"><span>Погашение<span class="tiny" style="display:block">${esc(r.byName||"—")} · ${nt(branchName(r.branch))} · ${dtt(r.at)}${r.note?" · "+esc(r.note):""}</span></span><span class="amt">−${money(r.amount)}</span></div>`).join("")}
+    ${c.voidedAt?`<div class="fitem"><span>Аннулирован<span class="tiny" style="display:block">${esc(c.voidedByName||"—")} · ${dtt(c.voidedAt)}</span></span><span></span></div>`:""}
+  </div>
+  <div class="wrap" style="margin-top:20px">
+    ${st!=="used"&&st!=="void"?`<button class="btn primary" data-act="redeem" data-id="${esc(c.id)}">Погасить</button>`:""}
+    ${st!=="void"&&S.me.role==="owner"?`<button class="btn sm" data-act="edit" data-id="${esc(c.id)}">Изменить срок и филиал</button>`:""}
+    ${st!=="void"&&S.me.role==="owner"?`<button class="btn sm danger" data-act="void" data-id="${esc(c.id)}">Аннулировать</button>`:""}
+  </div>`;
+}
+
+function mReset(m){
+  return head("Временный пароль", esc(m.name))+`
+  <p class="tiny" style="margin:0 0 14px">Продиктуйте эти шесть цифр. При первом входе программа попросит поставить свой пароль.</p>
+  <div class="gift"><div class="cap">ВРЕМЕННЫЙ ПАРОЛЬ</div><div class="num">${esc(m.code)}</div>
+    <div class="cells"><div><span class="lbl">Логин</span><b>${esc(m.login||"—")}</b></div></div></div>
+  <button class="btn primary" data-act="close" style="width:100%">Понятно</button>`;
+}
+
+function mPass(m){
+  return head("Смена пароля", esc(S.me.name)+" · логин "+esc(S.me.login||"—"))+`
+  ${m.err?'<div class="err">'+esc(m.err)+'</div>':""}
+  <label class="f"><span>Новый пароль — ровно 6 цифр</span><input class="in" id="pw-1" type="password" inputmode="numeric" maxlength="6"></label>
+  <label class="f"><span>Повторите</span><input class="in" id="pw-2" type="password" inputmode="numeric" maxlength="6"></label>
+  <button class="btn primary" data-act="dopass" style="width:100%;margin-top:8px">Сохранить пароль</button>`;
+}
+
+function mFind(m){
+  const q = String(m.q||"").trim().toLowerCase();
+  const pick = S.certs.filter(x=>{
+    if(!q) return true;
+    return [x.number,x.toName,x.fromName,x.toPhone,x.fromPhone].some(v=>String(v||"").toLowerCase().includes(q));
+  }).slice(0,10);
+  return head("Продлить срок","Найдите сертификат — по номеру или имени")+`
+  <label class="f"><span>Номер или имя</span><input class="in" data-k="e-q" id="e-q" data-act="fq" value="${esc(m.q||"")}" placeholder="1, MB-0001 или имя"></label>
+  ${pick.length? '<div class="clist" style="border-top:0">'+pick.map(x=>{ const s2=statusOf(x);
+      return `<button class="crow s-${s2}" data-act="epick" data-id="${esc(x.id)}">
+        <span class="no">${esc(x.number)}</span>
+        <span><span class="nm">${esc(x.toName||"Без имени")}</span>
+          <span class="tiny" style="display:block">${nt(branchName(x.soldBranch))}${x.expiresAt?" · до "+dt(x.expiresAt):""}</span></span>
+        <span class="rt"><span class="st ${s2}">${ST[s2]}</span><span class="amt">${money(x.balance)}</span></span>
+      </button>`; }).join("")+'</div>'
+    : '<p class="tiny">Ничего не нашлось.</p>'}`;
+}
+
+function mEdit(m){
+  const c = S.certs.find(x=>x.id===m.id);
+  if(!c) return head("Изменение")+'<div class="empty">Не найден</div>';
+  const st = statusOf(c);
+  const cur = c.expiresAt ? isoDate(c.expiresAt) : isoDate(new Date());
+  return head("Сертификат "+esc(c.number), esc(c.toName||"Без имени")+" · остаток "+money(c.balance))+`
+  ${m.err?'<div class="err">'+esc(m.err)+'</div>':""}
+  <div class="lbl" style="margin-bottom:6px">Срок действия</div>
+  <div class="tiny" style="margin-bottom:12px">Сейчас: ${c.expiresAt?dt(c.expiresAt):"без срока"}${st==="expired"?" — истёк":""}</div>
+  <div class="wrap" style="margin-bottom:14px">
+    <button class="chip" data-act="addm" data-m="3">+ 3 месяца</button>
+    <button class="chip" data-act="addm" data-m="6">+ 6 месяцев</button>
+    <button class="chip" data-act="addm" data-m="12">+ 1 год</button>
+  </div>
+  <label class="f"><span>Действует до</span><input class="in" id="e-exp" type="date" value="${cur}"></label>
+  ${S.me.role==="owner"?`<div class="lbl" style="margin:18px 0 6px">Филиал продажи</div>
+  <div class="tiny" style="margin-bottom:8px">Сейчас: ${nt(branchName(c.soldBranch))}</div>
+  <label class="f">${branchSelect("e-branch", c.soldBranch)}</label>`:""}
+  <button class="btn primary" data-act="doedit" data-id="${esc(c.id)}" style="width:100%;margin-top:8px">Сохранить</button>`;
+}
+
+/* ---------- события ---------- */
+function val(id){ const el=document.getElementById(id); return el?el.value.trim():""; }
+function numval(id){ return Math.round(Number(String(val(id)).replace(/[^\d.]/g,""))||0); }
+
+document.addEventListener("click", async ev=>{
+  const t = ev.target.closest("[data-act]"); if(!t) return;
+  const a = t.dataset.act;
+  if(a==="scrim" && ev.target!==t) return;
+  if(S.busy && ["dosell","doredeem","dosignup","dologin"].includes(a)) return;
+  try{
+    if(a==="gtab"){ S.gate.tab=t.dataset.t; S.gate.err=""; render(); return; }
+    if(a==="dologin"){
+      const login=val("l-login").toLowerCase(), pass=val("l-pass");
+      const p = S.staff.find(s=>String(s.login||"").toLowerCase()===login);
+      if(!p || p.active===false){ S.gate.err="Такого логина нет или доступ отключён."; render(); return; }
+      if(await hashPass(pass, p.id) !== p.passHash){ S.gate.err="Неверный пароль."; render(); return; }
+      S.me=p; ss("mb_uid",p.id); S.gate.err=""; render(); return;
+    }
+    if(a==="dosignup"){
+      const name=val("su-name"), login=val("su-login").toLowerCase(), pass=val("su-pass"), pass2=val("su-pass2");
+      if(name.length<2){ S.gate.err="Укажите имя и фамилию."; render(); return; }
+      if(login.length<3 || login.length>30 || /\s/.test(login)){ S.gate.err="Логин — от 3 до 30 знаков, без пробелов. Можно почту или имя."; render(); return; }
+      if(S.staff.some(s=>String(s.login||"").toLowerCase()===login)){ S.gate.err="Такой логин уже занят."; render(); return; }
+      if(!/^\d{6}$/.test(pass)){ S.gate.err="Пароль — ровно 6 цифр."; render(); return; }
+      if(pass!==pass2){ S.gate.err="Пароли не совпадают."; render(); return; }
+      if(S.staff.length>0){
+        const need = String(cfg("signupCode")||"").trim().toUpperCase();
+        if(need && val("su-code").toUpperCase()!==need){ S.gate.err="Неверный код доступа."; render(); return; }
+      }
+      S.busy=true;
+      const id = safeId("u"+Date.now().toString(36));
+      const role = S.staff.length===0 ? "owner" : "admin";
+      await S.db.doc("staff/"+id).set({name, login, branch:val("su-branch"), role,
+        passHash:await hashPass(pass,id), active:true, createdAt:new Date().toISOString()});
+      if(!S.settings) await saveSettings({});
+      ss("mb_uid",id); S.me = {id, name, login, branch:val("su-branch"), role};
+      await writeLog("Регистрация", name+" · "+branchName(val("su-branch"))+" · логин "+login);
+      S.busy=false; flash("Доступ создан"); return;
+    }
+    if(a==="logout"){ S.me=null; ss("mb_uid",null); S.gate={tab:"login",err:""}; closeModal(); render(); return; }
+    if(a==="theme"){
+      const cur = document.documentElement.getAttribute("data-theme");
+      const dark = cur ? cur==="dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.setAttribute("data-theme", dark?"light":"dark"); ls("mb_theme", dark?"light":"dark"); return;
+    }
+    if(a==="nav"){ S.view=t.dataset.v; closeModal(); render(); window.scrollTo(0,0); return; }
+    if(a==="per"){ S.period=t.dataset.p; render(); return; }
+    if(a==="det"){ S.det=!S.det; render(); return; }
+    if(a==="applyper"){ S.from=val("p-from"); S.to=val("p-to"); render(); return; }
+    if(a==="fst"){ S.fStatus=t.dataset.s; render(); return; }
+    if(a==="fbr"){ S.fBranch=t.dataset.b; render(); return; }
+    if(a==="csv"){ await exportCsv(); return; }
+    if(a==="close"||a==="scrim"){ closeModal(); return; }
+    if(a==="open"){ openModal({type:"cert", id:t.dataset.id}); return; }
+    if(a==="sell"){ openModal({type:"sell"}); return; }
+    if(a==="redeem"){ openModal({type:"redeem", id:t.dataset.id||"", q:""}); return; }
+    if(a==="rpick"){ S.modal.id=t.dataset.id; S.modal.q=""; S.modal.err=""; renderModal(true); return; }
+    if(a==="more2"){
+      S.modal.more = !S.modal.more;
+      S.modal.keep = {nominal:val("f-nominal"), from:val("f-from"), to:val("f-to")};
+      renderModal(true);
+      const k=S.modal.keep;
+      if(document.getElementById("f-nominal")) document.getElementById("f-nominal").value=k.nominal;
+      if(document.getElementById("f-from")) document.getElementById("f-from").value=k.from;
+      if(document.getElementById("f-to")) document.getElementById("f-to").value=k.to;
+      return;
+    }
+    if(a==="nom"){ const el=document.getElementById("f-nominal"); if(el) el.value=t.dataset.v; return; }
+    if(a==="ramt"){ const el=document.getElementById("r-amt"); if(el) el.value=t.dataset.v; return; }
+
+    if(a==="dosell"){
+      const nominal=numval("f-nominal");
+      if(nominal<=0){ S.modal.err="Укажите номинал сертификата."; renderModal(true); return; }
+      S.busy=true; t.disabled=true;
+      const no = await doSell({nominal, fromName:val("f-from"), fromPhone:val("f-fromph"),
+        toName:val("f-to"), toPhone:val("f-toph"), branch:val("f-branch"), expiresAt:val("f-exp"), note:val("f-note")});
+      S.busy=false; closeModal(); flash("Сертификат "+no+" продан"); return;
+    }
+    if(a==="doredeem"){
+      const c = S.certs.find(x=>x.id===t.dataset.id), amt = numval("r-amt");
+      if(amt<=0){ S.modal.err="Укажите сумму списания."; renderModal(true); return; }
+      S.busy=true; t.disabled=true;
+      try{
+        const left = await doRedeem(c, amt, val("r-branch"), val("r-note"));
+        S.busy=false; closeModal();
+        flash(left>0 ? "Списано "+money(amt)+", остаток "+money(left) : "Сертификат погашен полностью");
+      }catch(e){ S.busy=false; S.modal.err=e.message||"Не удалось провести операцию"; renderModal(true); }
+      return;
+    }
+    if(a==="void"){
+      const c = S.certs.find(x=>x.id===t.dataset.id);
+      if(!confirm("Аннулировать сертификат "+c.number+"? Остаток сгорит.")) return;
+      await S.db.doc("certs/"+c.id).update({status:"void", voidedAt:new Date().toISOString(), voidedByName:S.me.name});
+      await writeLog("Аннулирование", c.number+" · сгорел остаток "+money(c.balance));
+      flash("Сертификат аннулирован"); renderModal(true); return;
+    }
+    if(a==="pass"){ openModal({type:"pass"}); return; }
+    if(a==="role"){
+      if(S.me.role!=="owner"){ flash("Назначать может только директор", true); return; }
+      const p = S.staff.find(x=>x.id===t.dataset.id);
+      const owners = S.staff.filter(x=>x.role==="owner" && x.active!==false).length;
+      if(p.role==="owner" && owners<=1){ flash("Это последний директор — снять роль нельзя", true); return; }
+      const to = p.role==="owner" ? "admin" : "owner";
+      if(!confirm(to==="owner" ? "Сделать "+p.name+" директором? Она получит полный отчёт, журнал, настройки и право увольнять."
+        : "Снять с "+p.name+" роль директора? Останется администратором.")) return;
+      await S.db.doc("staff/"+p.id).update({role:to});
+      await writeLog(to==="owner"?"Назначен директор":"Снята роль директора", p.name);
+      flash(to==="owner"?p.name+" — директор":p.name+" — администратор"); return;
+    }
+    if(a==="resetpass"){
+      if(S.me.role!=="owner"){ flash("Сбросить пароль может только директор", true); return; }
+      const p = S.staff.find(x=>x.id===t.dataset.id);
+      const code = String(Math.floor(100000+Math.random()*900000));
+      await S.db.doc("staff/"+p.id).update({passHash: await hashPass(code, p.id), mustChange:true, active:true});
+      await writeLog("Сброс пароля", p.name);
+      openModal({type:"reset", name:p.name, login:p.login, code}); return;
+    }
+    if(a==="dopass"){
+      const p1=val("pw-1"), p2=val("pw-2");
+      if(!/^\d{6}$/.test(p1)){ S.modal.err="Пароль — ровно 6 цифр."; renderModal(true); return; }
+      if(p1!==p2){ S.modal.err="Пароли не совпадают."; renderModal(true); return; }
+      await S.db.doc("staff/"+S.me.id).update({passHash: await hashPass(p1, S.me.id), mustChange:false});
+      await writeLog("Смена пароля", S.me.name);
+      closeModal(); flash("Пароль изменён"); return;
+    }
+    if(a==="findedit"){ if(S.me.role!=="owner"){ flash("Продлить срок может только директор", true); return; } openModal({type:"find", q:""}); return; }
+    if(a==="epick"){ openModal({type:"edit", id:t.dataset.id}); return; }
+    if(a==="edit"){ if(S.me.role!=="owner"){ flash("Изменить может только директор", true); return; } openModal({type:"edit", id:t.dataset.id}); return; }
+    if(a==="addm"){
+      const el=document.getElementById("e-exp"); if(!el) return;
+      const base = el.value ? new Date(el.value) : new Date();
+      const from = isNaN(base) || base < new Date() ? new Date() : base;
+      el.value = isoDate(addMonths(from, Number(t.dataset.m)||12)); return;
+    }
+    if(a==="savecode"){
+      const code = val("s-code").trim();
+      if(code.length<4){ flash("Код — не короче четырёх знаков", true); return; }
+      await saveSettings({signupCode:code});
+      await writeLog("Изменён код регистрации", "");
+      flash("Код сохранён"); return;
+    }
+    if(a==="doedit"){
+      const c = S.certs.find(x=>x.id===t.dataset.id);
+      const exp = val("e-exp");
+      if(!/^\d{4}-\d{2}-\d{2}$/.test(exp)){ S.modal.err="Укажите дату окончания."; renderModal(true); return; }
+      const patch = {expiresAt:exp};
+      const br = val("e-branch");
+      if(br) patch.soldBranch = br;
+      await S.db.doc("certs/"+c.id).update(patch);
+      const parts = [];
+      if(!c.expiresAt || isoDate(c.expiresAt)!==exp) parts.push("срок "+(c.expiresAt?dt(c.expiresAt):"—")+" → "+dt(exp));
+      if(br && br!==c.soldBranch) parts.push("филиал "+branchName(c.soldBranch)+" → "+branchName(br));
+      if(parts.length) await writeLog("Изменение сертификата", c.number+" · "+parts.join(", "));
+      closeModal(); flash("Сохранено: срок до "+dt(exp)); return;
+    }
+    if(a==="mybranch"){
+      const v = val("my-branch");
+      await S.db.doc("staff/"+S.me.id).update({branch:v});
+      flash("Филиал изменён"); return;
+    }
+    if(a==="delstaff"){
+      const s = S.staff.find(x=>x.id===t.dataset.id);
+      if(!confirm("Уволить "+s.name+"? Вход закроется и человек исчезнет из списка. Проданные ею сертификаты и все записи в журнале останутся.")) return;
+      await S.db.doc("staff/"+s.id).delete();
+      await writeLog("Удалён сотрудник", s.name+" · "+branchName(s.branch));
+      flash("Удалено"); return;
+    }
+    if(a==="togglestaff"){
+      const s = S.staff.find(x=>x.id===t.dataset.id);
+      await S.db.doc("staff/"+s.id).update({active: s.active===false});
+      await writeLog(s.active===false?"Доступ включён":"Доступ отключён", s.name);
+      flash(s.active===false?"Доступ включён":"Доступ отключён"); return;
+    }
+    if(a==="savenum"){
+      await saveSettings({validityMonths:Math.max(1,numval("s-val")||12)});
+      flash("Сохранено"); return;
+    }
+  }catch(e){
+    S.busy=false;
+    const msg = (e && e.message) || (e && e.code) || "Что-то пошло не так";
+    if(S.modal){ S.modal.err=msg; renderModal(true); } else { S.gate.err=msg; flash(msg, true); render(); }
+  }
+});
+document.addEventListener("input", e=>{
+  const t = e.target.closest("[data-act]"); if(!t) return;
+  if(t.dataset.act==="q"){ S.q=t.value; render(); }
+  if(t.dataset.act==="rq"){ S.modal.q=t.value; S.modal.id=""; renderModal(true); }
+  if(t.dataset.act==="fq"){ S.modal.q=t.value; renderModal(true); }
+});
+document.addEventListener("change", async e=>{
+  const t = e.target.closest('[data-act="setbranch"]'); if(!t) return;
+  try{
+    const p = S.staff.find(x=>x.id===t.dataset.id);
+    await S.db.doc("staff/"+p.id).update({branch:t.value});
+    await writeLog("Смена филиала сотрудника", p.name+": "+branchName(p.branch)+" → "+branchName(t.value));
+    flash(p.name+" — "+branchName(t.value));
+  }catch(err){ flash("Не удалось изменить филиал", true); }
+});
+document.addEventListener("keydown", e=>{
+  if(e.key==="Escape" && S.modal) closeModal();
+  if(e.key==="Enter" && !S.me){
+    const b = document.querySelector('[data-act="dologin"], [data-act="dosignup"]');
+    if(b) b.click();
+  }
+});
+(function init(){ const th = ls("mb_theme"); if(th) document.documentElement.setAttribute("data-theme", th); boot(); })();
+</script>
+</body>
+</html>

@@ -119,6 +119,9 @@ label.f{display:block;margin-bottom:15px}
 label.f>span{display:block;font-size:11.5px;letter-spacing:.045em;color:var(--ink-3);margin-bottom:6px;font-weight:500}
 .in{width:100%;padding:10px 0;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;font-size:15px}
 .in:focus{outline:0;border-bottom-color:var(--gold);box-shadow:0 1px 0 var(--gold)}
+.badfield{border-bottom:2px solid #C0392B !important;box-shadow:0 1px 0 #C0392B}
+.in::placeholder{color:var(--ink-3);opacity:.5;font-style:italic}
+.in::-webkit-input-placeholder{color:var(--ink-3);opacity:.5;font-style:italic}
 select.in{appearance:none;padding-right:22px;
   background-image:linear-gradient(45deg,transparent 50%,var(--ink-3) 50%),linear-gradient(135deg,var(--ink-3) 50%,transparent 50%);
   background-position:calc(100% - 9px) 19px,calc(100% - 5px) 19px;background-size:4px 4px;background-repeat:no-repeat}
@@ -665,14 +668,16 @@ function renderGate(){
         <label class="f"><span>Пароль — 6 цифр</span><input class="in" id="l-pass" data-g="l-pass" type="password" inputmode="numeric" maxlength="6" autocomplete="current-password"></label>
         <button class="btn primary" data-act="dologin" style="width:100%;margin-top:6px">Войти</button>
       `:`
-        <label class="f"><span>Имя и фамилия</span><input class="in" id="su-name" data-g="su-name" value="${esc(gf("su-name"))}" placeholder="Айгерим Нурланова"></label>
+        <label class="f"><span>Имя и фамилия</span><input class="in" id="su-name" data-g="su-name" value="${esc(gf("su-name"))}" placeholder="например: Айгерим Нурланова"></label>
         <label class="f"><span>Филиал</span><select class="in" id="su-branch" data-g="su-branch">${branchOpts}</select></label>
-        <label class="f"><span>Логин — без пробелов</span><input class="in" id="su-login" data-g="su-login" value="${esc(gf("su-login"))}" autocapitalize="none" placeholder="zhamila или почта"></label>
+        <label class="f"><span>Логин — без пробелов</span><input class="in" id="su-login" data-g="su-login" value="${esc(gf("su-login"))}" autocapitalize="none" placeholder="например: aigerim"></label>
         <label class="f"><span>Пароль — ровно 6 цифр</span><input class="in" id="su-pass" data-g="su-pass" type="password" inputmode="numeric" maxlength="6" autocomplete="new-password"></label>
         <label class="f"><span>Повторите пароль</span><input class="in" id="su-pass2" data-g="su-pass2" type="password" inputmode="numeric" maxlength="6" autocomplete="new-password"></label>
-        ${first?"":'<label class="f"><span>Код доступа — спросите у директора</span><input class="in" id="su-code" data-g="su-code" value="'+esc(gf("su-code"))+'" autocapitalize="characters" placeholder="MOMS2026"></label>'}
+        ${first?"":'<label class="f"><span>Код доступа — спросите у директора</span><input class="in" id="su-code" data-g="su-code" value="'+esc(gf("su-code"))+'" autocapitalize="characters" placeholder="введите код"></label>'}
         <button class="btn primary" data-act="dosignup" style="width:100%;margin-top:6px">Создать доступ</button>
       `}
+      <button class="btn sm" data-act="diag" style="width:100%;margin-top:16px">Проверка связи с базой</button>
+      ${g.diag?'<div class="tiny" style="white-space:pre-wrap;margin-top:10px;padding:10px;border:1px solid var(--line-2);border-radius:8px;line-height:1.7">'+esc(g.diag)+'</div>':''}
     </div></div></div>`;
 }
 
@@ -690,7 +695,16 @@ function render(){
       const el = document.getElementById(k);
       if(el && gfv[k]!=null) el.value = gfv[k];
     });
-    if(fg){
+    if(S.gate.focus){
+      const el = document.getElementById(S.gate.focus);
+      S.gate.focus = "";
+      if(el){
+        el.classList.add("badfield");
+        el.focus();
+        const card = document.querySelector(".gatecard");
+        if(card && card.scrollIntoView) card.scrollIntoView({block:"start"});
+      }
+    } else if(fg){
       const el = document.querySelector('[data-g="'+fg+'"]');
       if(el){ el.focus(); try{ el.setSelectionRange(fpos,fpos); }catch(_){} }
     }
@@ -1126,6 +1140,36 @@ function mEdit(m){
 }
 
 /* ---------- события ---------- */
+function gerr(msg, focusId){
+  S.gate.err = msg; S.gate.focus = focusId || ""; render();
+}
+async function runDiag(){
+  const lines = [];
+  const add = s => { lines.push(s); S.gate.diag = lines.join("\n"); render(); };
+  S.gate.diag = "Проверяю, подождите…"; render();
+
+  add("Адрес: " + location.protocol + "//" + (location.host || "файл на компьютере"));
+  if(location.protocol === "file:")
+    add("✗ Страница открыта как файл с компьютера. Так браузер запрещает связь с базой. Нужно открывать по адресу сайта.");
+  else
+    add("✓ Открыто по адресу сайта");
+
+  add((window.crypto && window.crypto.subtle) ? "✓ Шифрование паролей доступно"
+                                             : "✗ Шифрование паролей недоступно — пароль сохранить не получится");
+  add("Хранилище: " + (S.db && S.db.redeemRpc ? "общая база Supabase" : "только этот браузер (общей базы нет!)"));
+
+  try{ await waitMax(S.db.doc("meta/settings").get(), 20000); add("✓ Чтение из базы работает"); }
+  catch(e){ add("✗ Чтение из базы не прошло: " + ((e&&e.message)||e)); }
+
+  try{
+    await waitMax(S.db.doc("diag/ping").set({at:new Date().toISOString()}), 20000);
+    add("✓ Запись в базу работает");
+    try{ await waitMax(S.db.doc("diag/ping").delete(), 10000); }catch(_){}
+  }catch(e){ add("✗ Запись в базу не прошла: " + ((e&&e.message)||e)); }
+
+  add("Сотрудников заведено: " + S.staff.length);
+  add("Код регистрации задан: " + (cfg("signupCode") ? "да" : "нет"));
+}
 function waitMax(promise, ms){
   return Promise.race([promise, new Promise((_,rej)=>setTimeout(()=>rej(new Error("база молчит "+Math.round(ms/1000)+" секунд")), ms))]);
 }
@@ -1138,27 +1182,28 @@ document.addEventListener("click", async ev=>{
   if(a==="scrim" && ev.target!==t) return;
   if(S.busy && ["dosell","doredeem","dosignup","dologin"].includes(a)) return;
   try{
-    if(a==="gtab"){ S.gate.tab=t.dataset.t; S.gate.err=""; render(); return; }
+    if(a==="gtab"){ S.gate.tab=t.dataset.t; S.gate.err=""; S.gate.diag=""; render(); return; }
+    if(a==="diag"){ await runDiag(); return; }
     if(a==="dologin"){
       const login=val("l-login").toLowerCase(), pass=val("l-pass");
       const p = S.staff.find(s=>String(s.login||"").toLowerCase()===login);
-      if(!p || p.active===false){ S.gate.err="Такого логина нет или доступ отключён."; render(); return; }
-      if(await hashPass(pass, p.id) !== p.passHash){ S.gate.err="Неверный пароль."; render(); return; }
+      if(!p || p.active===false){ gerr("Такого логина нет или доступ отключён.","l-login"); return; }
+      if(await hashPass(pass, p.id) !== p.passHash){ gerr("Неверный пароль.","l-pass"); return; }
       S.me=p; ss("mb_uid",p.id); S.gate.err=""; S.gate.f={}; render(); return;
     }
     if(a==="dosignup"){
       const name=val("su-name"), login=val("su-login").toLowerCase(), pass=val("su-pass"), pass2=val("su-pass2");
-      if(name.length<2){ S.gate.err="Укажите имя и фамилию."; render(); return; }
-      if(login.length<3 || login.length>30 || /\s/.test(login)){ S.gate.err="Логин — от 3 до 30 знаков, без пробелов. Можно почту или имя."; render(); return; }
-      if(S.staff.some(s=>String(s.login||"").toLowerCase()===login)){ S.gate.err="Такой логин уже занят."; render(); return; }
-      if(!/^\d{6}$/.test(pass)){ S.gate.err="Пароль — ровно 6 цифр."; render(); return; }
-      if(pass!==pass2){ S.gate.err="Пароли не совпадают."; render(); return; }
+      if(name.length<2){ gerr("Поле «Имя и фамилия» пустое. Серый наклонный текст — это только пример, его надо заменить своим.","su-name"); return; }
+      if(login.length<3 || login.length>30 || /\s/.test(login)){ gerr("Поле «Логин» пустое или слишком короткое. Нужно от 3 до 30 знаков без пробелов.","su-login"); return; }
+      if(S.staff.some(s=>String(s.login||"").toLowerCase()===login)){ gerr("Такой логин уже занят — значит доступ уже создан. Перейдите на вкладку «Вход».","su-login"); return; }
+      if(!/^\d{6}$/.test(pass)){ gerr("Пароль — ровно 6 цифр, без букв. Например 485712.","su-pass"); return; }
+      if(pass!==pass2){ gerr("Пароли не совпадают.","su-pass2"); return; }
       if(S.staff.length>0){
         const norm = s => String(s||"").replace(/\s+/g,"").toUpperCase();
         const need = norm(cfg("signupCode"));
         const got  = norm(val("su-code"));
-        if(need && !got){ S.gate.err="Введите код доступа — его даёт директор."; render(); return; }
-        if(need && got!==need){ S.gate.err="Код доступа неверный. Уточните его у директора."; render(); return; }
+        if(need && !got){ gerr("Поле «Код доступа» пустое. Код даёт директор.","su-code"); return; }
+        if(need && got!==need){ gerr("Код доступа неверный. Уточните его у директора.","su-code"); return; }
       }
       S.busy=true;
       const bt = document.querySelector('[data-act="dosignup"]');
